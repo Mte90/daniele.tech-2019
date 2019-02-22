@@ -1,0 +1,23 @@
+{
+  "browserSyncOptions" : {
+    "proxy": "localhost/",
+    "notify": false
+  },
+  "browserSyncWatchFiles" : [
+    "./css/*.min.css",
+    "./js/*.min.js",
+    "./**/*.php"
+  ],
+  "paths" : {
+    "js": "./js",
+    "css": "./css",
+    "img": "./images",
+    "imgsrc": "./src/images/",
+    "node": "./node_modules/",
+    "bower": "./bower_components/",
+    "dev": "./src/",
+    "devscss": "./src/scss/",
+    "devjs": "./src/js/",
+    "dist": "./dist"
+  }
+}

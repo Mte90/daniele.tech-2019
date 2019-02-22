@@ -1,0 +1,52 @@
+{
+  "name": "understrap",
+  "version": "0.8.9",
+  "description": "WordPress Theme framework",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "gulp copyAssets",
+    "start": "gulp",
+    "build": "gulp build --prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/holger1411/understrap.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "framework",
+    "bootstrap",
+    "underscores"
+  ],
+  "author": "Holger Koenemann",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/holger1411/understrap/issues"
+  },
+  "homepage": "https://understrap.com",
+  "dependencies": {
+    "bootstrap": "4.2.1",
+    "popper.js": "^1.14.6",
+    "undescores-for-npm": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "autoprefixer": "^9.4.3",
+    "babel-loader": "^8.0.4",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack-stream": "^5.2.1",
+    "yargs": "^12.0.5"
+  }
+}
