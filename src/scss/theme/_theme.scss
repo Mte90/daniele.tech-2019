@@ -8,14 +8,36 @@
 	border-bottom: 1px solid $gray-400;
 }
 
+.fa {
+	font-size: 40px;
+	color: transparent;
+	&::before {
+		color: white;
+	}
+}
+
 .comments-area {
 	margin:25px;
 }
 
-.navbar-left {
-	position: absolute;
+.navbar-left, .navbar-right {
+	position: fixed;
+	top: 110px;
 
 	.navbar-nav {
 		flex-direction: column;
+		width: 60px;
+		li {
+			height:60px;
+			text-align: center;
+			a, i {
+				width:60px;
+				height:60px;
+			}
+		}
 	}
+}
+
+.navbar-right {
+	right:0;
 }
