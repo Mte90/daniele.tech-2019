@@ -95,7 +95,6 @@ export const dist = (done) => {
       '!gulpfile.js',
       '!gulpconfig.json',
       '!CHANGELOG.md',
-      '!.travis.yml',
       '!jshintignore',
       '!codesniffer.ruleset.xml',
       '*'

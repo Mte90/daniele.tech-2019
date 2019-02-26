@@ -1,6 +1,6 @@
 {
   "browserSyncOptions" : {
-    "proxy": "localhost/",
+    "proxy": "daniele.test",
     "notify": false
   },
   "browserSyncWatchFiles" : [
