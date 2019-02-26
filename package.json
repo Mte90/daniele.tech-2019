@@ -1,30 +1,14 @@
 {
   "name": "daniele.tech-2019",
   "version": "1.0.0",
-  "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
     "postinstall": "gulp copyAssets",
     "start": "gulp",
     "build": "gulp build --prod"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/holger1411/understrap.git"
-  },
-  "keywords": [
-    "wordpress",
-    "theme",
-    "framework",
-    "bootstrap",
-    "underscores"
-  ],
   "author": "Holger Koenemann",
   "license": "GPL-2.0",
-  "bugs": {
-    "url": "https://github.com/holger1411/understrap/issues"
-  },
-  "homepage": "https://understrap.com",
   "dependencies": {
     "bootstrap": "4.3.1",
     "popper.js": "^1.14.7",
