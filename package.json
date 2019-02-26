@@ -1,6 +1,6 @@
 {
-  "name": "understrap",
-  "version": "0.8.9",
+  "name": "daniele.tech-2019",
+  "version": "1.0.0",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
   "homepage": "https://understrap.com",
   "dependencies": {
     "bootstrap": "4.3.1",
-    "popper.js": "^1.14.6",
+    "popper.js": "^1.14.7",
     "undescores-for-npm": "^1.0.0"
   },
   "devDependencies": {

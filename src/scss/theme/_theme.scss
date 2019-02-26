@@ -20,24 +20,32 @@
 	margin:25px;
 }
 
+.nav-link span {
+	display: none;
+}
+
 .navbar-left, .navbar-right {
-	position: fixed;
-	top: 110px;
+	top: -10px;
+	float: left;
 
 	.navbar-nav {
 		flex-direction: column;
 		width: 60px;
 		li {
 			height:60px;
+			width: 60px;
 			text-align: center;
 			a, i {
 				width:60px;
 				height:60px;
+			}
+			i {
+				width:40px;
 			}
 		}
 	}
 }
 
 .navbar-right {
-	right:0;
+	float:right;
 }

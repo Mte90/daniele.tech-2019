@@ -237,6 +237,17 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 				$item_output .= '<a' . $attributes . '>';
 			}
 
+			/**
+			 * Initiate empty icon var, then if we have a string containing any
+			 * icon classes form the icon markup with an <i> element. This is
+			 * output inside of the item before the $title (the link text).
+			 */
+			$icon_html = '';
+			if ( ! empty( $icon_class_string ) ) {
+				// append an <i> with the icon classes to what is output before links.
+				$icon_html = '<i class="' . esc_attr( $icon_class_string ) . '" aria-hidden="true"></i> ';
+			}
+
 			/** This filter is documented in wp-includes/post-template.php */
 			$title = apply_filters( 'the_title', $item->title, $item->ID );
 
@@ -263,19 +274,8 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 				}
 			}
 
-			/**
-			 * Initiate empty icon var, then if we have a string containing any
-			 * icon classes form the icon markup with an <i> element. This is
-			 * output inside of the item before the $title (the link text).
-			 */
-			$icon_html = '';
-			if ( ! empty( $icon_class_string ) ) {
-				// append an <i> with the icon classes to what is output before links.
-				$icon_html = '<i class="' . esc_attr( $icon_class_string ) . '" aria-hidden="true">'. $title . '</i> ';
-			}
-
 			// Put the item contents into $output.
-			$item_output .= isset( $args->link_before ) ? $args->link_before . $icon_html . $args->link_after : '';
+			$item_output .= isset( $args->link_before ) ? $args->link_before . $icon_html . $title . $args->link_after : '';
 			/**
 			 * This is the end of the internal nav item. We need to close the
 			 * correct element depending on the type of link or link mod.

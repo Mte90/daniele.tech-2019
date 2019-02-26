@@ -60,7 +60,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		<!-- The WordPress Menu goes here -->
 		<?php wp_nav_menu(
 				array(
 					'theme_location'  => 'primary',
@@ -73,4 +72,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 					'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 				)
 		); ?>
-	</nav><!-- .site-navigation -->
+	</nav>
+
+	<nav class="navbar navbar-expand-sm navbar-dark navbar-right bg-info">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSocial" aria-controls="navbarSocial" aria-expanded="false" aria-abel="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<?php wp_nav_menu(
+			array(
+				'theme_location'  => 'social',
+				'container_class' => 'collapse navbar-collapse',
+				'container_id'    => 'navbarSocial',
+				'menu_class'      => 'navbar-nav ml-auto',
+				'fallback_cb'     => '',
+				'menu_id'         => 'social-menu',
+				'depth'           => 2,
+				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+			)
+		); ?>
+	</nav>

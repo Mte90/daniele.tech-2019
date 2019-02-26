@@ -51,3 +51,10 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
 		echo apply_filters( 'understrap_site_info_content', $site_info ); // WPCS: XSS ok.
 	}
 }
+
+
+add_action( 'nav_menu_item_title', 'add_span_menu_item' );
+
+function add_span_menu_item( $title ) {
+	return '<span>' . $title . '</span>';
+}
