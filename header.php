@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="container" >
 		<?php endif; ?>
 
-		<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+		<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a> The Open Source Multiversal Guy
 
 		<?php if ( 'container' === $container ) : ?>
 			</div><!-- .container -->
@@ -52,20 +52,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-	<?php
-		wp_nav_menu(
-			array(
-				'theme_location'  => 'primary',
-				'container_class' => 'collapse navbar-collapse',
-				'container_id'    => 'navbarNavDropdown',
-				'menu_class'      => 'navbar-nav ml-auto',
-				'fallback_cb'     => '',
-				'menu_id'         => 'main-menu',
-				'depth'           => 2,
-				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-			)
-		);
-		?>
+<?php
+wp_nav_menu(
+	array(
+		'theme_location'  => 'primary',
+		'container_class' => 'collapse navbar-collapse',
+		'container_id'    => 'navbarNavDropdown',
+		'menu_class'      => 'navbar-nav ml-auto',
+		'fallback_cb'     => '',
+		'menu_id'         => 'main-menu',
+		'depth'           => 2,
+		'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+	)
+);
+?>
 	</nav>
 
 	<nav class="navbar navbar-expand-sm navbar-dark navbar-right bg-info">
