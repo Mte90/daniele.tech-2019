@@ -22,7 +22,6 @@ $understrap_includes = array(
 	'/custom-comments.php',                 // Custom Comments file.
 	'/jetpack.php',                         // Load Jetpack compatibility file.
 	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker.
-	'/woocommerce.php',                     // Load WooCommerce functions.
 	'/editor.php',                          // Load Editor functions.
 );
 
@@ -31,5 +30,6 @@ foreach ( $understrap_includes as $file ) {
 	if ( ! $filepath ) {
 		trigger_error( sprintf( 'Error locating /inc%s for inclusion', $file ), E_USER_ERROR );
 	}
+
 	require_once $filepath;
 }

@@ -24,6 +24,14 @@
 	display: none;
 }
 
+#wrapper-navbar .navbar {
+	padding:0.8rem;
+}
+
+.navbar-brand {
+	font-size: 1.3rem;
+}
+
 .navbar-left, .navbar-right {
 	top: -10px;
 	float: left;
@@ -48,4 +56,14 @@
 
 .navbar-right {
 	float:right;
+}
+
+// Extracted from http://l-lin.github.io/font-awesome-animation/
+@keyframes float{
+	0%{transform: translateY(0)}
+	50%{transform: translateY(-6px)}
+	100%{transform: translateY(0)}
+}
+.fa:hover {
+	animation: float 2s linear infinite;
 }
