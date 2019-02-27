@@ -10,12 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-</div><!-- #closing the primary container from /global-templates/left-sidebar-check.php -->
+</div><!-- #closing the primary container -->
 
-<?php $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' ); ?>
+<?php
 
-<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
+$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
-	<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
-
-<?php endif; ?>
+if ( is_home() || is_front_page() ) {
+	get_template_part( 'sidebar-templates/sidebar', 'homepage' );
+} elseif ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) {
+	get_template_part( 'sidebar-templates/sidebar', 'right' );
+}
