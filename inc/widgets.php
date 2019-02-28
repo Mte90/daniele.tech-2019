@@ -48,7 +48,6 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 	 * @return array $params
 	 */
 	function understrap_widget_classes( $params ) {
-
 		global $sidebars_widgets;
 
 		/*
@@ -87,7 +86,7 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 		return $params;
 
 	}
-} // endif function_exists( 'understrap_widget_classes' ).
+}
 
 add_action( 'widgets_init', 'understrap_widgets_init' );
 
@@ -145,4 +144,8 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		);
 
 	}
-} // endif function_exists( 'understrap_widgets_init' ).
+}
+
+require_once 'widgets/last-5-reports.php';
+require_once 'widgets/about-me.php';
+require_once 'widgets/codeat.php';

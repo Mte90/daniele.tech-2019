@@ -2,6 +2,18 @@
 	background-color:$blue;
 }
 
+img.wp-smiley, img.emoji, .codeat h3 img {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 .07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
+}
+
 .entry-header {
 	margin-bottom: 10px;
 	padding-bottom: 5px;
@@ -67,3 +79,14 @@
 .fa:hover {
 	animation: float 2s linear infinite;
 }
+
+.about-me p img {
+	height: 85px;
+	float: left;
+	margin-right: 4px;
+}
+
+.widget h3 {
+	text-align:center;
+}
+

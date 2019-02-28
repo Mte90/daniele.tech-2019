@@ -1,10 +1,9 @@
 {
-    "name": "holger1411/understrap",
-    "description": "Combines Automattic´s Underscores Starter Theme and Bootstrap 4",
+    "name": "mte90/daniele.tech-2019",
+    "description": "theme",
     "type": "wordpress-theme",
     "license": "GPL-2.0",
     "minimum-stability": "stable",
-    "require": {"composer/installers": "^1.5"},
-    "keywords": ["wordpress","theme","bootstrap"],
-    "homepage": "https://github.com/holger1411/understrap"
+    "require": {"composer/installers": "^1.5",
+        "wpbp/widgets-helper": "^1.0"}
 }
