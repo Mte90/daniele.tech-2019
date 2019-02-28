@@ -131,8 +131,17 @@ function understrap_mobile_web_app_meta() {
 }
 add_action( 'wp_head', 'understrap_mobile_web_app_meta' );
 
-function get_home_photo_random() {
-	$files = glob( realpath( get_template_directory() . '/img/foto' ) . '/*.*' );
-	$file  = array_rand( $files );
-	return str_replace( get_template_directory(), get_stylesheet_directory_uri(), $files[$file] );
+function get_home_photo_carousel() {
+	$photos = glob( realpath( get_template_directory() . '/img/foto' ) . '/*.*' );
+	shuffle( $photos );
+	$html = '';
+	$active = " active";
+	foreach ( $photos as &$photo ) {
+		$html .= '<div class="carousel-item' . $active . '" data-interval="2500">
+			<img src="' . str_replace( get_template_directory(), get_stylesheet_directory_uri(), $photo ) . '" />
+		</div>';
+		$active = '';
+	}
+
+	return $html;
 }
