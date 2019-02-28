@@ -26,6 +26,7 @@ if ( ! function_exists( 'understrap_body_classes' ) ) {
 		if ( is_multi_author() ) {
 			$classes[] = 'group-blog';
 		}
+
 		// Adds a class of hfeed to non-singular pages.
 		if ( ! is_singular() ) {
 			$classes[] = 'hfeed';
@@ -47,7 +48,6 @@ if ( ! function_exists( 'understrap_adjust_body_class' ) ) {
 	 * @return mixed
 	 */
 	function understrap_adjust_body_class( $classes ) {
-
 		foreach ( $classes as $key => $value ) {
 			if ( 'tag' == $value ) {
 				unset( $classes[ $key ] );
@@ -71,7 +71,6 @@ if ( ! function_exists( 'understrap_change_logo_class' ) ) {
 	 * @return mixed
 	 */
 	function understrap_change_logo_class( $html ) {
-
 		$html = str_replace( 'class="custom-logo"', 'class="img-fluid"', $html );
 		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html );
 		$html = str_replace( 'alt=""', 'title="Home" alt="logo"', $html );
@@ -84,7 +83,7 @@ if ( ! function_exists( 'understrap_change_logo_class' ) ) {
  * Display navigation to next/previous post when applicable.
  */
 
-if ( ! function_exists ( 'understrap_post_nav' ) ) {
+if ( ! function_exists( 'understrap_post_nav' ) ) {
 	function understrap_post_nav() {
 		// Don't print empty markup if there's nowhere to navigate.
 		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
@@ -101,6 +100,7 @@ if ( ! function_exists ( 'understrap_post_nav' ) ) {
 				if ( get_previous_post_link() ) {
 					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
 				}
+
 				if ( get_next_post_link() ) {
 					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
 				}
@@ -130,3 +130,9 @@ function understrap_mobile_web_app_meta() {
 	echo '<meta name="apple-mobile-web-app-title" content="' . esc_attr( get_bloginfo( 'name' ) ) . ' - ' . esc_attr( get_bloginfo( 'description' ) ) . '">' . "\n";
 }
 add_action( 'wp_head', 'understrap_mobile_web_app_meta' );
+
+function get_home_photo_random() {
+	$files = glob( realpath( get_template_directory() . '/img/foto' ) . '/*.*' );
+	$file  = array_rand( $files );
+	return str_replace( get_template_directory(), get_stylesheet_directory_uri(), $files[$file] );
+}

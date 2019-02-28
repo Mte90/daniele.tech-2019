@@ -24,8 +24,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-8 content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
-
-
+					<img src='<?php echo get_home_photo_random(); ?>' />
 				</main><!-- #main -->
 
 			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
