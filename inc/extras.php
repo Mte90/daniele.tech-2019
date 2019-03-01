@@ -134,14 +134,36 @@ add_action( 'wp_head', 'understrap_mobile_web_app_meta' );
 function get_home_photo_carousel() {
 	$photos = glob( realpath( get_template_directory() . '/img/foto' ) . '/*.*' );
 	shuffle( $photos );
-	$html = '';
-	$active = " active";
+	$html   = '';
+	$active = ' active';
 	foreach ( $photos as &$photo ) {
-		$html .= '<div class="carousel-item' . $active . '" data-interval="2500">
+		$html  .= '<div class="carousel-item' . $active . '" data-interval="2500">
 			<img src="' . str_replace( get_template_directory(), get_stylesheet_directory_uri(), $photo ) . '" />
-		</div>';
+			</div>';
 		$active = '';
 	}
 
 	return $html;
+}
+
+function get_last_5_from_cat( $id ) {
+	// get the localized id
+	$pl_id    = pll_get_term( $id );
+	$out      = '<h3>' . get_cat_name( $pl_id ) . '</h3>';
+	$out     .= '<ul>';
+	$args     = array(
+		'cat'              => $id . ', -272',
+		'posts_per_page'   => 5,
+		'order'            => 'DESC',
+		'orderby'          => 'date',
+		'category__not_in' => 272,
+	);
+	$catquery = new WP_Query( $args );
+
+	while ( $catquery->have_posts() ) {
+		$catquery->the_post();
+		$out .= '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>' . "\n";
+	};
+	$out .= '</ul>';
+	return $out;
 }

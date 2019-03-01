@@ -31,11 +31,29 @@ $container = get_theme_mod( 'understrap_container_type' );
 							?>
 						</div>
 					</div>
-				</main><!-- #main -->
+					<div class="container category-block">
+						<div class="row">
+							<div class="col-md-6">
+								<?php echo get_last_5_from_cat( 85 ); ?>
+							</div>
+							<div class="col-md-6">
+								<?php echo get_last_5_from_cat( 75 ); ?>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<?php echo get_last_5_from_cat( 109 ); ?>
+							</div>
+							<div class="col-md-6">
+								<?php echo get_last_5_from_cat( 77 ); ?>
+							</div>
+						</div>
+					</div>
+				</main>
 
 			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
-		</div><!-- .row end -->
+		</div>
 
 	</div><!-- #content -->
 

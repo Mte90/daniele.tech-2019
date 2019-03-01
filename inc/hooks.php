@@ -58,3 +58,13 @@ add_action( 'nav_menu_item_title', 'add_span_menu_item' );
 function add_span_menu_item( $title ) {
 	return '<span>' . $title . '</span>';
 }
+
+function gfont_resource_hints( $hints, $relation_type ) {
+	if ( 'preconnect' === $relation_type ) {
+		$hints[] = '//fonts.googleapis.com';
+	}
+
+	return $hints;
+}
+
+add_filter( 'wp_resource_hints', 'gfont_resource_hints', 10, 2 );
