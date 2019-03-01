@@ -152,7 +152,7 @@ function get_last_5_from_cat( $id ) {
 	$out      = '<h3>' . get_cat_name( $pl_id ) . '</h3>';
 	$out     .= '<ul>';
 	$args     = array(
-		'cat'              => $id . ', -272',
+		'cat'              => $id,
 		'posts_per_page'   => 5,
 		'order'            => 'DESC',
 		'orderby'          => 'date',
