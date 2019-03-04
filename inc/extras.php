@@ -167,3 +167,23 @@ function get_last_5_from_cat( $id ) {
 	$out .= '</ul>';
 	return $out;
 }
+
+function get_last_5_from_guestpost() {
+	// get the localized id
+	$out      = '<h3>' . __( 'Guest Post', 'understrap' ) . '</h3>';
+	$out     .= '<ul>';
+	$args     = array(
+		'post_type'      => 'guest_post',
+		'posts_per_page' => 5,
+		'order'          => 'DESC',
+		'orderby'        => 'date',
+	);
+	$catquery = new WP_Query( $args );
+
+	while ( $catquery->have_posts() ) {
+		$catquery->the_post();
+		$out .= '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>' . "\n";
+	};
+	$out .= '</ul>';
+	return $out;
+}
