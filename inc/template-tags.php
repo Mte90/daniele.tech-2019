@@ -31,6 +31,7 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 				apply_filters( 'understrap_posted_on_time', $time_string )
 			)
 		);
+
 		echo $posted_on; // WPCS: XSS OK.
 	}
 }

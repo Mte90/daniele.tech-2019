@@ -80,6 +80,17 @@ img.wp-smiley, img.emoji, .codeat h3 img {
 	animation: float 2s linear infinite;
 }
 
+.entry-header ul {
+	text-align:center;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+.entry-header li {
+	display:inline;
+}
+
 .about-me p img {
 	height: 85px;
 	float: left;

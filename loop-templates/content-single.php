@@ -13,8 +13,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
-
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<ul>
+		<?php
+		pll_the_languages( array( 'show_flags' => 1 ) );
+		echo '</ul>';
+		the_title( '<h1 class="entry-title">', '</h1>' );
+		?>
 
 		<div class="entry-meta">
 
@@ -28,14 +32,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php the_content(); ?>
 
-		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+<?php
+wp_link_pages(
+	array(
+		'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+		'after'  => '</div>',
+	)
+);
+?>
 
 	</div><!-- .entry-content -->
 
