@@ -182,7 +182,7 @@ function get_last_5_from_guestpost() {
 
 	while ( $catquery->have_posts() ) {
 		$catquery->the_post();
-		$out .= '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>' . "\n";
+		$out .= '<li><a href="' . guest_post_permalink( get_the_permalink() ) . '">' . get_the_title() . '</a></li>' . "\n";
 	};
 	$out .= '</ul>';
 	return $out;
