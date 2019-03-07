@@ -14,6 +14,10 @@ img.wp-smiley, img.emoji, .codeat h3 img {
     padding: 0 !important;
 }
 
+.entry-content p {
+	word-break:break-all;
+}
+
 .entry-header {
 	margin-bottom: 10px;
 	padding-bottom: 5px;
@@ -98,6 +102,10 @@ img.wp-smiley, img.emoji, .codeat h3 img {
 }
 
 .widget h3 {
+	text-align:center;
+}
+
+#text-2 div {
 	text-align:center;
 }
 
