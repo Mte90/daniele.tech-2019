@@ -173,12 +173,12 @@ function append_query_string( $url ) {
     return $url;
 }
 
-add_action( 'wp_head', 'guest_redirect' );
+add_action( 'get_header', 'guest_redirect' );
 function guest_redirect() {
     if ( is_single() ) {
         $url = append_query_string( '' );
         if ( !empty( $url ) ) {
-            wp_safe_redirect( $url, 301 );
+            wp_redirect( $url, 301 );
             exit;
         }
     }
