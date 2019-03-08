@@ -28,30 +28,30 @@ class About_Me_Widget extends WPH_Widget {
     public function widget( $args, $instance ) {
         $out  = $args[ 'before_widget' ];
         $out .= $args[ 'before_title' ];
-		$out .= 'Ciao <img class="emoji" alt="🇮🇹" src="https://s.w.org/images/core/emoji/11/svg/1f1ee-1f1f9.svg"> I am Daniele';
+		$out .= 'Ciao <img class="emoji" alt="Italy flag" src="https://s.w.org/images/core/emoji/11/svg/1f1ee-1f1f9.svg"> I am Daniele';
 		$out .= $args[ 'after_title' ];
 
-        $out .= '<p><img src="' . get_template_directory_uri() . '/img/pixel.png">';
-        $out .= __( 'Full Stack Developer, OpenSource addicted, Community Lover. Involved in WordPress, ClassicPress and Mozilla projects.', 'understrap' );
-        $out .= '</p>';
+		$out .= '<p><img src="' . get_template_directory_uri() . '/img/pixel.png">';
+		$out .= __( 'Full Stack Developer, OpenSource addicted, Community Lover. Involved in WordPress, ClassicPress and Mozilla projects.', 'understrap' );
+		$out .= '</p>';
 
-        $out .= $args[ 'after_widget' ];
-        echo $out;
-    }
+		$out .= $args[ 'after_widget' ];
+		echo $out;
+	}
 
 }
 
 // Register widget
 if ( !function_exists( 'load_about_me' ) ) {
 
-    /**
-     * Initialize the widget
-     *
-     * @return void
-     */
-    function load_about_me() {
-        register_widget( 'About_Me_Widget' );
-    }
+	/**
+	 * Initialize the widget
+	 *
+	 * @return void
+	 */
+	function load_about_me() {
+		register_widget( 'About_Me_Widget' );
+	}
 
-    add_action( 'widgets_init', 'load_about_me', 1 );
+	add_action( 'widgets_init', 'load_about_me', 1 );
 }
