@@ -24,7 +24,7 @@ img.wp-smiley, img.emoji, .codeat h3 img {
 	border-bottom: 1px solid $gray-400;
 }
 
-.fa {
+.fa, .fab {
 	font-size: 40px;
 	color: transparent;
 	&::before {
@@ -80,7 +80,7 @@ img.wp-smiley, img.emoji, .codeat h3 img {
 	50%{transform: translateY(-6px)}
 	100%{transform: translateY(0)}
 }
-.fa:hover {
+.fa:hover,.fab:hover {
 	animation: float 2s linear infinite;
 }
 
