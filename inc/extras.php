@@ -169,7 +169,6 @@ function get_last_5_from_cat( $id ) {
 }
 
 function get_last_5_from_guestpost() {
-	// get the localized id
 	$out      = '<h3>' . __( 'My Guest Posts', 'understrap' ) . '</h3>';
 	$out     .= '<ul>';
 	$args     = array(
@@ -189,7 +188,6 @@ function get_last_5_from_guestpost() {
 }
 
 function get_last_5_from_books() {
-	// get the localized id
 	$out      = '<h3>' . __( 'Books Reviews', 'understrap' ) . '</h3>';
 	$out     .= '<ul>';
 	$args     = array(
