@@ -1,7 +1,4 @@
-import './bootstrap4/bootstrap.min.js';
+import './bootstrap4/carousel.js';
 
 // Here you can import custom scripts
 import './custom-scripts.js';
-
-// Here you can import custom reusable components
-import './components/component.js';
