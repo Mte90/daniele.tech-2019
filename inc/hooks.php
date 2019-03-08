@@ -89,7 +89,7 @@ function register_demo_metabox() {
     );
 }
 
-function guest_post() {
+function theme_post_types() {
     $labels = array(
         'name'               => _x( 'Guest Posts', 'Post Type General Name', 'understrap' ),
         'singular_name'      => _x( 'Guest Post', 'Post Type Singular Name', 'understrap' ),
@@ -126,9 +126,45 @@ function guest_post() {
         'rewrite'             => array( 'slug' => 'guest-post' ),
     );
     register_post_type( 'guest_post', $args );
+
+    $labels = array(
+        'name'               => _x( 'Books', 'Post Type General Name', 'understrap' ),
+        'singular_name'      => _x( 'Book', 'Post Type Singular Name', 'understrap' ),
+        'menu_name'          => __( 'Books Review', 'understrap' ),
+        'parent_item_colon'  => __( 'Parent Item:', 'understrap' ),
+        'all_items'          => __( 'All Items', 'understrap' ),
+        'view_item'          => __( 'View Item', 'understrap' ),
+        'add_new_item'       => __( 'Add New Item', 'understrap' ),
+        'add_new'            => __( 'Add New', 'understrap' ),
+        'edit_item'          => __( 'Edit Item', 'understrap' ),
+        'update_item'        => __( 'Update Item', 'understrap' ),
+        'search_items'       => __( 'Search Item', 'understrap' ),
+        'not_found'          => __( 'Not found', 'understrap' ),
+        'not_found_in_trash' => __( 'Not found in Trash', 'understrap' ),
+    );
+    $args   = array(
+        'label'              => __( 'books-review', 'understrap' ),
+        'description'        => __( 'Books Review', 'understrap' ),
+        'labels'             => $labels,
+        'supports'           => array( 'title', 'editor', 'thumbnail' ),
+        'taxonomies'         => array( 'category' ),
+        'hierarchical'       => false,
+        'public'             => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_nav_menus'  => true,
+        'show_in_admin_bar'  => true,
+        'menu_position'      => 12,
+        'can_export'         => true,
+        'has_archive'        => 'true',
+        'publicly_queryable' => true,
+        'capability_type'    => 'page',
+    );
+    register_post_type( 'books-review', $args );
+
 }
 
-add_action( 'init', 'guest_post', 0 );
+add_action( 'init', 'theme_post_types', 0 );
 function append_query_string( $url ) {
     if ( 'guest_post' === get_post_type( get_the_ID() ) ) {
         return get_post_meta( get_the_ID(), '_cmb_gp_link', true );
@@ -193,3 +229,26 @@ if ( is_admin() ) {
         return $exclusions;
     }
 }
+
+add_filter(
+    'the_content',
+    function( $content ) {
+        // crayon filter regex
+        $regex =
+            // opening tag, language identifier (optional)
+            '/<pre\s+class="lang:([a-z]+?)([^"]*)"\s*>' .
+
+            // case insensitive, multiline
+            '/im';
+
+        // apply filter regex
+        return preg_replace_callback(
+            $regex,
+            function( $match ) {
+                return '<pre class="EnlighterJSRAW" data-enlighter-language="' . esc_attr( $match[1] ) . '">';
+            },
+            $content
+        );
+    },
+    1
+);

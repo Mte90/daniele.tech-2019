@@ -170,7 +170,7 @@ function get_last_5_from_cat( $id ) {
 
 function get_last_5_from_guestpost() {
 	// get the localized id
-	$out      = '<h3>' . __( 'Guest Post', 'understrap' ) . '</h3>';
+	$out      = '<h3>' . __( 'My Guest Posts', 'understrap' ) . '</h3>';
 	$out     .= '<ul>';
 	$args     = array(
 		'post_type'      => 'guest_post',
@@ -183,6 +183,26 @@ function get_last_5_from_guestpost() {
 	while ( $catquery->have_posts() ) {
 		$catquery->the_post();
 		$out .= '<li><a href="' . guest_post_permalink( get_the_permalink() ) . '">' . get_the_title() . '</a></li>' . "\n";
+	};
+	$out .= '</ul>';
+	return $out;
+}
+
+function get_last_5_from_books() {
+	// get the localized id
+	$out      = '<h3>' . __( 'Books Reviews', 'understrap' ) . '</h3>';
+	$out     .= '<ul>';
+	$args     = array(
+		'post_type'      => 'books-review',
+		'posts_per_page' => 5,
+		'order'          => 'DESC',
+		'orderby'        => 'date',
+	);
+	$catquery = new WP_Query( $args );
+
+	while ( $catquery->have_posts() ) {
+		$catquery->the_post();
+		$out .= '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>' . "\n";
 	};
 	$out .= '</ul>';
 	return $out;
