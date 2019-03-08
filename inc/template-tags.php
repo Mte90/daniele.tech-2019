@@ -25,9 +25,7 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 		);
 		$posted_on   = apply_filters(
 			'understrap_posted_on', sprintf(
-				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
-				esc_html_x( 'Posted on', 'post date', 'understrap' ),
-				esc_url( get_permalink() ),
+				'<span class="posted-on">%1$s</span>',
 				apply_filters( 'understrap_posted_on_time', $time_string )
 			)
 		);
@@ -48,7 +46,7 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 			$categories_list = get_the_category_list( esc_html__( ', ', 'understrap' ) );
 			if ( $categories_list && understrap_categorized_blog() ) {
 				/* translators: %s: Categories of current post */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %s', 'understrap' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">%s</span>', $categories_list ); // WPCS: XSS OK.
 			}
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'understrap' ) );

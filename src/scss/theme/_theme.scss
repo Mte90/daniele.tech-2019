@@ -33,7 +33,7 @@ img.wp-smiley, img.emoji, .codeat h3 img {
 }
 
 .comments-area {
-	margin:25px;
+	margin:10px;
 }
 
 .nav-link span {
@@ -70,7 +70,7 @@ img.wp-smiley, img.emoji, .codeat h3 img {
 	}
 }
 
-.navbar-right {
+.navbar-right, .edit-link {
 	float:right;
 }
 
@@ -89,10 +89,16 @@ img.wp-smiley, img.emoji, .codeat h3 img {
 	text-transform: uppercase;
 	font-weight: 600;
 	font-size: 1rem;
+	margin-bottom: 0.6rem;
+	padding-left: 0px;
 }
 
 .entry-header li {
 	display:inline;
+}
+
+.entry-meta {
+	text-align:center;
 }
 
 .about-me p img {
@@ -103,6 +109,14 @@ img.wp-smiley, img.emoji, .codeat h3 img {
 
 .widget h3 {
 	text-align:center;
+}
+
+.widget.codeat a {
+	text-decoration:underline;
+}
+
+.widget.last-reports {
+	margin-top: 1rem;
 }
 
 #text-2 div {
@@ -117,3 +131,25 @@ iframe {
 	margin:0 auto;
 	display:block;
 }
+
+.category-block ul {
+	padding-left:20px;
+}
+
+.category-block h3 {
+	text-align:center;
+}
+
+.single-post article {
+	border-bottom: 1px solid #ced4da;
+	padding-bottom: 10px;
+}
+
+.entry-footer {
+	border-top:1px solid #ced4da;
+	padding-top:10px;
+}
+.comments-area textarea, .widget_search input.field {
+	border: 1px solid #ced4da;
+}
+

@@ -41,35 +41,41 @@ class Last_Reports_Widget extends WPH_Widget {
     public function widget( $args, $instance ) {
         $out  = $args[ 'before_widget' ];
         $out .= $args[ 'before_title' ];
-        $out .= $instance[ 'title' ];
-        $out .= $args[ 'after_title' ];
+		$out .= __( $instance[ 'title' ], 'understrap' );
+		$out .= $args[ 'after_title' ];
 
-        $out     .= '<ul>';
-        $catquery = new WP_Query( 'cat=272&posts_per_page=5&order=DESC&orderby=date' );
+		$out     .= '<ul>';
+		$wpq      = array(
+			'cat'            => '272',
+			'posts_per_page' => 5,
+			'lang'           => 'en',
+			'order'          => 'DESC',
+			'orderby'        => 'date',
+		);
+		$catquery = new WP_Query( $wpq );
+		while ( $catquery->have_posts() ) {
+			$catquery->the_post();
+			$out .= '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>' . "\n";
+		};
+		$out .= '</ul>';
 
-        while ( $catquery->have_posts() ) {
-            $catquery->the_post();
-            $out .= '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>' . "\n";
-        };
-        $out .= '</ul>';
-
-        $out .= $args[ 'after_widget' ];
-        echo $out;
-    }
+		$out .= $args[ 'after_widget' ];
+		echo $out;
+	}
 
 }
 
 // Register widget
 if ( !function_exists( 'load_last_reports' ) ) {
 
-    /**
-     * Initialize the widget
-     *
-     * @return void
-     */
-    function load_last_reports() {
-        register_widget( 'Last_Reports_Widget' );
-    }
+	/**
+	 * Initialize the widget
+	 *
+	 * @return void
+	 */
+	function load_last_reports() {
+		register_widget( 'Last_Reports_Widget' );
+	}
 
-    add_action( 'widgets_init', 'load_last_reports', 1 );
+	add_action( 'widgets_init', 'load_last_reports', 1 );
 }
