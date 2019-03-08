@@ -148,7 +148,10 @@ function get_home_photo_carousel() {
 
 function get_last_5_from_cat( $id ) {
 	// get the localized id
-	$pl_id    = pll_get_term( $id );
+	$pl_id = $id;
+	if(function_exists('pll_get_term')) {
+		$pl_id    = pll_get_term( $id );
+	}
 	$out      = '<h3>' . get_cat_name( $pl_id ) . '</h3>';
 	$out     .= '<ul>';
 	$args     = array(
