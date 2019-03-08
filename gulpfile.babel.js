@@ -53,26 +53,26 @@ export const copyAssets = (done) => {
   src(paths.node + 'bootstrap/scss/**/*.scss')
   .pipe(dest(paths.devscss + 'bootstrap4'));
 
-  src(paths.node + 'font-awesome/fonts/**/*.{ttf,woff,woff2,eot,svg}')
-  .pipe(dest('./fonts'));
+	src(paths.node + '@fortawesome/fontawesome-free/webfonts/**/*.{ttf,woff,woff2,eot,svg}')
+		.pipe(dest('./fonts'));
 
-  src(paths.node + 'font-awesome/scss/*.scss')
-  .pipe(dest(paths.devscss + 'fontawesome'));
+	src(paths.node + '@fortawesome/fontawesome-free/scss/*.scss')
+		.pipe(dest(paths.devscss + 'fontawesome'));
 
-  src( paths.node + 'undescores-for-npm/sass/media/*.scss')
-  .pipe(dest(paths.devscss + 'underscores'));
+	src( paths.node + 'undescores-for-npm/sass/media/*.scss')
+		.pipe(dest(paths.devscss + 'underscores'));
 
-  src(paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js')
-  .pipe(dest(paths.devjs));
+	src(paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js')
+		.pipe(dest(paths.devjs));
 
-  done();
+	done();
 }
 
 export const clean = () => del(['dist']);
 
 export const dist = (done) => {
-  src( [
-      '**/*',
+	src( [
+		'**/*',
 		'!' + paths.node,
 		'!' + paths.node + '/**',
 		'!' + paths.dev,
