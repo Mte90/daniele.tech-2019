@@ -209,19 +209,6 @@ function feed_request( $qv ) {
 }
 add_filter( 'request', 'feed_request' );
 
-add_action(
-    'wp_enqueue_scripts',
-    function() {
-        if ( !is_admin() ) {
-            wp_dequeue_script( 'quicktags-min' );
-            wp_deregister_script( 'quicktags-min' );
-            wp_dequeue_style( 'github-oembed' );
-            wp_deregister_style( 'github-oembed' );
-        }
-    },
-    200
-);
-
 if ( is_admin() ) {
     add_filter( 'list_terms_exclusions', 'hide_specific_category', 10, 2 );
     function hide_specific_category( $exclusions, $args ) {
@@ -252,3 +239,12 @@ add_filter(
     },
     1
 );
+
+add_action( 'wp_enqueue_scripts', function() {
+	if ( is_front_page() || is_archive() ) {
+		wp_dequeue_style( 'github-oembed' );
+		wp_deregister_style( 'github-oembed' );
+		wp_dequeue_style( 'enlighter-local-css' );
+		wp_deregister_style( 'enlighter-local-css' );
+	}
+}, 200 );
