@@ -73,78 +73,74 @@ export const clean = () => del(['dist']);
 export const dist = (done) => {
   src( [
       '**/*',
-      '!' + paths.bower,
-      '!' + paths.bower + '/**',
-      '!' + paths.node,
-      '!' + paths.node + '/**',
-      '!' + paths.dev,
-      '!' + paths.dev + '/**',
-      '!' + paths.dist,
-      '!' + paths.dist + '/**',
-      '!' + paths.distprod,
-      '!' + paths.distprod + '/**',
-      '!' + paths.sass,
-      '!' + paths.sass + '/**',
-      '!readme.txt',
-      '!readme.md',
-      '!package.json',
-      '!package-lock.json',
-      '!gulpfile.js',
-      '!gulpconfig.json',
-      '!CHANGELOG.md',
-      '!jshintignore',
-      '!codesniffer.ruleset.xml',
-      '*'
-    ], { 'buffer': false } )
-    .pipe( dest( paths.dist ) );
-    done();
+		'!' + paths.node,
+		'!' + paths.node + '/**',
+		'!' + paths.dev,
+		'!' + paths.dev + '/**',
+		'!' + paths.dist,
+		'!' + paths.dist + '/**',
+		'!' + paths.distprod,
+		'!' + paths.distprod + '/**',
+		'!' + paths.sass,
+		'!' + paths.sass + '/**',
+		'!readme.md',
+		'!package.json',
+		'!package-lock.json',
+		'!gulpfile.js',
+		'!gulpconfig.json',
+		'!CHANGELOG.md',
+		'!jshintignore',
+		'*'
+	], { 'buffer': false } )
+		.pipe( dest( paths.dist ) );
+	done();
 }
 
 export const scripts = () => {
-  return src(paths.devjs + 'theme.js')
-  .pipe(webpack({
-    module: {
-      rules: [
-        {
-          test: /\.js$/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: []
-            }
-          }
-        }
-      ]
-    },
-    mode: PRODUCTION ? 'production' : 'development',
-    devtool: !PRODUCTION ? 'inline-source-map' : false,
-    optimization: {
-      minimize: true,
-      minimizer: [new UglifyJsPlugin({
-        include: /\.js$/
-        })
-      ]
-    },
-    output: {
-      filename: 'theme.js'
-    },
-    externals: {
-      jquery: 'jQuery'
-    },
-  }))
-  .pipe(dest(paths.js));
+	return src(paths.devjs + 'theme.js')
+		.pipe(webpack({
+			module: {
+				rules: [
+					{
+						test: /\.js$/,
+						use: {
+							loader: 'babel-loader',
+							options: {
+								presets: []
+							}
+						}
+					}
+				]
+			},
+			mode: PRODUCTION ? 'production' : 'development',
+			devtool: !PRODUCTION ? 'inline-source-map' : false,
+			optimization: {
+				minimize: true,
+				minimizer: [new UglifyJsPlugin({
+					include: /\.js$/
+				})
+				]
+			},
+			output: {
+				filename: 'theme.js'
+			},
+			externals: {
+				jquery: 'jQuery'
+			},
+		}))
+		.pipe(dest(paths.js));
 }
 
 export const serve = done => {
-  server.init(
-    cfg.browserSyncWatchFiles,
-    cfg.browserSyncOptions );
-  done();
+	server.init(
+		cfg.browserSyncWatchFiles,
+		cfg.browserSyncOptions );
+	done();
 };
 
 export const reload = done => {
-  server.reload();
-  done();
+	server.reload();
+	done();
 };
 
 export const dev = series(parallel(styles, images, scripts), serve, watchForChanges);
