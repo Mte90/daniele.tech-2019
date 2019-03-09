@@ -53,12 +53,6 @@ export const copyAssets = (done) => {
   src(paths.node + 'bootstrap/scss/**/*.scss')
   .pipe(dest(paths.devscss + 'bootstrap4'));
 
-	src(paths.node + '@fortawesome/fontawesome-free/webfonts/**/*.{ttf,woff,woff2,eot,svg}')
-		.pipe(dest('./fonts'));
-
-	src(paths.node + '@fortawesome/fontawesome-free/scss/*.scss')
-		.pipe(dest(paths.devscss + 'fontawesome'));
-
 	src( paths.node + 'undescores-for-npm/sass/media/*.scss')
 		.pipe(dest(paths.devscss + 'underscores'));
 
