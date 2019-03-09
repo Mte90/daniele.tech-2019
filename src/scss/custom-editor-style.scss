@@ -1,2 +1,7 @@
 //Add your own editor styles here or comment out the next line if you want to pull in the whole Bootstrap stuff
-//@import "theme"; 
+//@import "theme";
+
+@import "underscores"; // <------- Underscores media styles
+a {
+    color: #1F9BCF;
+}
