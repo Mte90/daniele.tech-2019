@@ -58,6 +58,7 @@ class Last_Reports_Widget extends WPH_Widget {
 			$catquery->the_post();
 			$out .= '<li><a href="' . get_the_permalink() . '">' . str_replace( 'My free software and open source activities of ' , '', get_the_title() ) . '</a></li>' . "\n";
 		};
+		$out .= '<li><a href="' . get_category_link( 272 ) . '">' . __( 'Archive' , 'understrap' ) . '</a></li>' . "\n";
 		$out .= '</ul>';
 
 		$out .= $args[ 'after_widget' ];
