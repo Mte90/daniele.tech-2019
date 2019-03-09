@@ -60,6 +60,7 @@ function add_span_menu_item( $title ) {
 function gfont_resource_hints( $hints, $relation_type ) {
 	if ( 'preconnect' === $relation_type ) {
 		$hints[] = '//fonts.googleapis.com';
+		$hints[] = '//cdnjs.cloudflare.com';
 	}
 
 	return $hints;
