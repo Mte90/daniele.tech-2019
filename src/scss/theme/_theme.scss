@@ -88,7 +88,7 @@ img.wp-smiley, img.emoji, .codeat h3 img {
 	animation: float 2s linear infinite;
 }
 
-.entry-header ul {
+.entry-header ul, .widget_polylang ul {
 	text-align:center;
 	text-transform: uppercase;
 	font-weight: 600;
@@ -97,7 +97,7 @@ img.wp-smiley, img.emoji, .codeat h3 img {
 	padding-left: 0px;
 }
 
-.entry-header li {
+.entry-header li,.widget_polylang li {
 	display:inline;
 }
 
