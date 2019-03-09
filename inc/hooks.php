@@ -203,7 +203,7 @@ add_filter( 'wpseo_author_link', 'wpseo_disable_rel_author' );
 
 function feed_request( $qv ) {
     if ( isset( $qv[ 'feed' ] ) && !isset( $qv[ 'post_type' ] ) ) {
-        $qv[ 'post_type' ] = array( 'post', 'guest_post' );
+        $qv[ 'post_type' ] = array( 'post', 'guest_post', 'books-review' );
     }
 
     return $qv;
@@ -249,3 +249,13 @@ add_action( 'wp_enqueue_scripts', function() {
 		wp_deregister_style( 'enlighter-local-css' );
 	}
 }, 200 );
+
+add_filter( 'get_the_excerpt', 'replace_post_excerpt_filter' );
+
+function replace_post_excerpt_filter($output) {
+        $yoast = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
+        if (empty($yoast)) {
+			return $output;
+        }
+        return $yoast;
+}
