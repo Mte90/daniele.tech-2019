@@ -47,7 +47,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	</div><!-- #wrapper-navbar end -->
 
-	<nav class="navbar navbar-expand-sm navbar-dark navbar-left bg-info">
+	<nav class="navbar navbar-expand-sm navbar-dark navbar-left bg-info d-none d-md-block">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -68,7 +68,7 @@ wp_nav_menu(
 ?>
 	</nav>
 
-	<nav class="navbar navbar-expand-sm navbar-dark navbar-right bg-info d-none d-lg-block">
+	<nav class="navbar navbar-expand-sm navbar-dark navbar-right bg-info d-none d-md-block">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSocial" aria-controls="navbarSocial" aria-expanded="false" aria-abel="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 			<span class="navbar-toggler-icon"></span>
 		</button>
