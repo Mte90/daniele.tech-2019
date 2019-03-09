@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2019-03-08 15:34+0100\n"
+"POT-Creation-Date: 2019-03-09 15:15+0100\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -192,11 +192,11 @@ msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
-#: inc/extras.php:172
+#: inc/extras.php:175
 msgid "My Guest Posts"
 msgstr ""
 
-#: inc/extras.php:191
+#: inc/extras.php:194
 msgid "Books Reviews"
 msgstr ""
 
@@ -219,83 +219,83 @@ msgstr ""
 msgid "CDN offered by %1$s"
 msgstr ""
 
-#: inc/hooks.php:76 inc/hooks.php:85
+#: inc/hooks.php:77 inc/hooks.php:86
 msgid "Link"
 msgstr ""
 
-#: inc/hooks.php:94
+#: inc/hooks.php:95
 msgctxt "Post Type General Name"
 msgid "Guest Posts"
 msgstr ""
 
-#: inc/hooks.php:95
+#: inc/hooks.php:96
 msgctxt "Post Type Singular Name"
 msgid "Guest Post"
 msgstr ""
 
-#: inc/hooks.php:96 inc/hooks.php:110
+#: inc/hooks.php:97 inc/hooks.php:111
 msgid "Guest Post"
 msgstr ""
 
-#: inc/hooks.php:97 inc/hooks.php:134
+#: inc/hooks.php:98 inc/hooks.php:135
 msgid "Parent Item:"
 msgstr ""
 
-#: inc/hooks.php:98 inc/hooks.php:135
+#: inc/hooks.php:99 inc/hooks.php:136
 msgid "All Items"
 msgstr ""
 
-#: inc/hooks.php:99 inc/hooks.php:136
+#: inc/hooks.php:100 inc/hooks.php:137
 msgid "View Item"
 msgstr ""
 
-#: inc/hooks.php:100 inc/hooks.php:137
+#: inc/hooks.php:101 inc/hooks.php:138
 msgid "Add New Item"
 msgstr ""
 
-#: inc/hooks.php:101 inc/hooks.php:138
+#: inc/hooks.php:102 inc/hooks.php:139
 msgid "Add New"
 msgstr ""
 
-#: inc/hooks.php:102 inc/hooks.php:139
+#: inc/hooks.php:103 inc/hooks.php:140
 msgid "Edit Item"
 msgstr ""
 
-#: inc/hooks.php:103 inc/hooks.php:140
+#: inc/hooks.php:104 inc/hooks.php:141
 msgid "Update Item"
 msgstr ""
 
-#: inc/hooks.php:104 inc/hooks.php:141
+#: inc/hooks.php:105 inc/hooks.php:142
 msgid "Search Item"
 msgstr ""
 
-#: inc/hooks.php:105 inc/hooks.php:142
+#: inc/hooks.php:106 inc/hooks.php:143
 msgid "Not found"
 msgstr ""
 
-#: inc/hooks.php:106 inc/hooks.php:143
+#: inc/hooks.php:107 inc/hooks.php:144
 msgid "Not found in Trash"
 msgstr ""
 
-#: inc/hooks.php:109
+#: inc/hooks.php:110
 msgid "guest_post"
 msgstr ""
 
-#: inc/hooks.php:131
+#: inc/hooks.php:132
 msgctxt "Post Type General Name"
 msgid "Books"
 msgstr ""
 
-#: inc/hooks.php:132
+#: inc/hooks.php:133
 msgctxt "Post Type Singular Name"
 msgid "Book"
 msgstr ""
 
-#: inc/hooks.php:133 inc/hooks.php:147
+#: inc/hooks.php:134 inc/hooks.php:148
 msgid "Books Review"
 msgstr ""
 
-#: inc/hooks.php:146
+#: inc/hooks.php:147
 msgid "books-review"
 msgstr ""
 
@@ -323,38 +323,28 @@ msgstr ""
 msgid "Read More..."
 msgstr ""
 
-#: inc/template-tags.php:29
-msgctxt "post date"
-msgid "Posted on"
-msgstr ""
-
-#: inc/template-tags.php:48 inc/template-tags.php:54
+#: inc/template-tags.php:46 inc/template-tags.php:52
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:51
-#, php-format
-msgid "Posted in %s"
-msgstr ""
-
-#: inc/template-tags.php:57
+#: inc/template-tags.php:55
 #, php-format
 msgid "Tagged %s"
 msgstr ""
 
-#: inc/template-tags.php:62
+#: inc/template-tags.php:60
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:62
+#: inc/template-tags.php:60
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:62
+#: inc/template-tags.php:60
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:68
+#: inc/template-tags.php:66
 #, php-format
 msgid "Edit %s"
 msgstr ""
@@ -399,7 +389,7 @@ msgstr ""
 msgid "Me and Myself"
 msgstr ""
 
-#: inc/widgets/about-me.php:35
+#: inc/widgets/about-me.php:36
 msgid ""
 "Full Stack Developer, OpenSource addicted, Community Lover. Involved in "
 "WordPress, ClassicPress and Mozilla projects."
@@ -413,7 +403,7 @@ msgstr ""
 msgid "My company"
 msgstr ""
 
-#: inc/widgets/codeat.php:35
+#: inc/widgets/codeat.php:36
 msgid ""
 "My <a href=\"https://codeat.co\">WebAgency in Rome</a> about WordPress and "
 "marketing. We work on freemium plugin development and website/application "
@@ -428,12 +418,16 @@ msgstr ""
 msgid "Last 5 FOSS Reports"
 msgstr ""
 
-#: inc/widgets/last-5-reports.php:22
+#: inc/widgets/last-5-reports.php:23
 msgid "Title"
 msgstr ""
 
-#: inc/widgets/last-5-reports.php:26
-msgid "Last reports"
+#: inc/widgets/last-5-reports.php:27
+msgid "Last FOSS reports"
+msgstr ""
+
+#: inc/widgets/last-5-reports.php:61
+msgid "Archive"
 msgstr ""
 
 #: loop-templates/content-none.php:19
@@ -459,7 +453,7 @@ msgid ""
 msgstr ""
 
 #: loop-templates/content-page.php:30 loop-templates/content-single.php:38
-#: loop-templates/content.php:43
+#: loop-templates/content.php:41
 msgid "Pages:"
 msgstr ""
 

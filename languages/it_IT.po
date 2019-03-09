@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2019-03-08 15:34+0100\n"
-"PO-Revision-Date: 2019-03-08 16:53+0100\n"
+"POT-Creation-Date: 2019-03-09 15:15+0100\n"
+"PO-Revision-Date: 2019-03-09 15:16+0100\n"
 "Last-Translator: Mte90 <mte90net@gmail.com>\n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -224,11 +224,11 @@ msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
-#: inc/extras.php:172
+#: inc/extras.php:175
 msgid "My Guest Posts"
 msgstr "I miei guest post"
 
-#: inc/extras.php:191
+#: inc/extras.php:194
 msgid "Books Reviews"
 msgstr "Recensione libri"
 
@@ -251,98 +251,95 @@ msgstr "%1$sTheme%2$s by Daniele Scasciafratte basato su understrap"
 msgid "CDN offered by %1$s"
 msgstr "CDN offerta da %s"
 
-#: inc/hooks.php:76 inc/hooks.php:85
-#, fuzzy
+#: inc/hooks.php:77 inc/hooks.php:86
 msgid "Link"
-msgstr "Immagine a grandezza naturale"
+msgstr "Link"
 
-#: inc/hooks.php:94
+#: inc/hooks.php:95
 #, fuzzy
 msgctxt "Post Type General Name"
 msgid "Guest Posts"
 msgstr "Guest Post"
 
-#: inc/hooks.php:95
+#: inc/hooks.php:96
 #, fuzzy
 msgctxt "Post Type Singular Name"
 msgid "Guest Post"
 msgstr "Guest Post"
 
-#: inc/hooks.php:96 inc/hooks.php:110
+#: inc/hooks.php:97 inc/hooks.php:111
 #, fuzzy
 msgid "Guest Post"
 msgstr "Guest Post"
 
-#: inc/hooks.php:97 inc/hooks.php:134
+#: inc/hooks.php:98 inc/hooks.php:135
 msgid "Parent Item:"
 msgstr ""
 
-#: inc/hooks.php:98 inc/hooks.php:135
+#: inc/hooks.php:99 inc/hooks.php:136
 msgid "All Items"
 msgstr ""
 
-#: inc/hooks.php:99 inc/hooks.php:136
+#: inc/hooks.php:100 inc/hooks.php:137
 #, fuzzy
 msgid "View Item"
 msgstr "Visualizza"
 
-#: inc/hooks.php:100 inc/hooks.php:137
+#: inc/hooks.php:101 inc/hooks.php:138
 #, fuzzy
 msgid "Add New Item"
 msgstr "Aggiungi"
 
-#: inc/hooks.php:101 inc/hooks.php:138
+#: inc/hooks.php:102 inc/hooks.php:139
 #, fuzzy
 msgid "Add New"
 msgstr "Aggiungi nuovo"
 
-#: inc/hooks.php:102 inc/hooks.php:139
+#: inc/hooks.php:103 inc/hooks.php:140
 #, fuzzy
 #| msgid "Edit %s"
 msgid "Edit Item"
 msgstr "Modifica"
 
-#: inc/hooks.php:103 inc/hooks.php:140
+#: inc/hooks.php:104 inc/hooks.php:141
 #, fuzzy
 msgid "Update Item"
 msgstr "Aggiorna"
 
-#: inc/hooks.php:104 inc/hooks.php:141
+#: inc/hooks.php:105 inc/hooks.php:142
 #, fuzzy
 #| msgid "Search"
 msgid "Search Item"
 msgstr "Cerca"
 
-#: inc/hooks.php:105 inc/hooks.php:142
-#, fuzzy
-#| msgid "Nothing Found"
+#: inc/hooks.php:106 inc/hooks.php:143
 msgid "Not found"
 msgstr "Non trovato"
 
-#: inc/hooks.php:106 inc/hooks.php:143
+#: inc/hooks.php:107 inc/hooks.php:144
 msgid "Not found in Trash"
 msgstr ""
 
-#: inc/hooks.php:109
+#: inc/hooks.php:110
 #, fuzzy
 msgid "guest_post"
 msgstr "Guest Post"
 
-#: inc/hooks.php:131
+#: inc/hooks.php:132
 msgctxt "Post Type General Name"
 msgid "Books"
 msgstr "Libri"
 
-#: inc/hooks.php:132
+#: inc/hooks.php:133
 msgctxt "Post Type Singular Name"
 msgid "Book"
 msgstr "Libro"
 
-#: inc/hooks.php:133 inc/hooks.php:147
+#: inc/hooks.php:134 inc/hooks.php:148
 msgid "Books Review"
 msgstr "Recensione libri"
 
-#: inc/hooks.php:146
+#: inc/hooks.php:147
 msgid "books-review"
 msgstr ""
 
@@ -372,43 +369,29 @@ msgstr "Menù Social"
 msgid "Read More..."
 msgstr "Leggi tutto..."
 
-#: inc/template-tags.php:29
-#, fuzzy
-#| msgctxt "post date"
-#| msgid "Posted on %s"
-msgctxt "post date"
-msgid "Posted on"
-msgstr "Scritto il"
-
-#: inc/template-tags.php:48 inc/template-tags.php:54
+#: inc/template-tags.php:46 inc/template-tags.php:52
 msgid ", "
 msgstr ", "
 
-#: inc/template-tags.php:51
-#, fuzzy, php-format
-#| msgid "Posted in %1$s"
-msgid "Posted in %s"
-msgstr "Pubblicato il %s"
-
-#: inc/template-tags.php:57
+#: inc/template-tags.php:55
 #, fuzzy, php-format
 #| msgid "Tagged %1$s"
 msgid "Tagged %s"
 msgstr "Etichettato %1$s"
 
-#: inc/template-tags.php:62
+#: inc/template-tags.php:60
 msgid "Leave a comment"
 msgstr "Commenta"
 
-#: inc/template-tags.php:62
+#: inc/template-tags.php:60
 msgid "1 Comment"
 msgstr "1 Commento"
 
-#: inc/template-tags.php:62
+#: inc/template-tags.php:60
 msgid "% Comments"
 msgstr "% Commenti"
 
-#: inc/template-tags.php:68
+#: inc/template-tags.php:66
 #, php-format
 msgid "Edit %s"
 msgstr "Modifica %s"
@@ -453,7 +436,7 @@ msgstr "Informazioni"
 msgid "Me and Myself"
 msgstr "Io e me stesso"
 
-#: inc/widgets/about-me.php:35
+#: inc/widgets/about-me.php:36
 msgid ""
 "Full Stack Developer, OpenSource addicted, Community Lover. Involved in "
 "WordPress, ClassicPress and Mozilla projects."
@@ -462,7 +445,6 @@ msgstr ""
 "in WordPress, ClassicPress e progetti Mozilla."
 
 #: inc/widgets/codeat.php:13
-#, fuzzy
 msgid "Codeat"
 msgstr "Codeat"
 
@@ -470,7 +452,7 @@ msgstr "Codeat"
 msgid "My company"
 msgstr "La mia azienda"
 
-#: inc/widgets/codeat.php:35
+#: inc/widgets/codeat.php:36
 msgid ""
 "My <a href=\"https://codeat.co\">WebAgency in Rome</a> about WordPress and "
 "marketing. We work on freemium plugin development and website/application "
@@ -488,14 +470,17 @@ msgstr "Ultimi resoconti"
 msgid "Last 5 FOSS Reports"
 msgstr "Ultimi 5 resoconti FOSS"
 
-#: inc/widgets/last-5-reports.php:22
-#, fuzzy
+#: inc/widgets/last-5-reports.php:23
 msgid "Title"
 msgstr "Titolo"
 
-#: inc/widgets/last-5-reports.php:26
-msgid "Last reports"
-msgstr "Ultimi resoconti"
+#: inc/widgets/last-5-reports.php:27
+msgid "Last FOSS reports"
+msgstr "Ultimi 5 resoconti FOSS"
+
+#: inc/widgets/last-5-reports.php:61
+msgid "Archive"
+msgstr "Archivio"
 
 #: loop-templates/content-none.php:19
 msgid "Nothing Found"
@@ -524,7 +509,7 @@ msgstr ""
 "Sembra che non troviamo quello che cerchi. Forse una ricerca può aiutare."
 
 #: loop-templates/content-page.php:30 loop-templates/content-single.php:38
-#: loop-templates/content.php:43
+#: loop-templates/content.php:41
 msgid "Pages:"
 msgstr "Pagine:"
 
@@ -544,6 +529,21 @@ msgstr "Cerca"
 #: searchform.php:17
 msgid "Search &hellip;"
 msgstr "Cerca &hellip;"
+
+#, fuzzy
+#~| msgctxt "post date"
+#~| msgid "Posted on %s"
+#~ msgctxt "post date"
+#~ msgid "Posted on"
+#~ msgstr "Scritto il"
+
+#, fuzzy
+#~| msgid "Posted in %1$s"
+#~ msgid "Posted in %s"
+#~ msgstr "Pubblicato il %s"
+
+#~ msgid "Last reports"
+#~ msgstr "Ultimi resoconti"
 
 #~ msgid "Posts by"
 #~ msgstr "Articoli di"
