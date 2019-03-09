@@ -68,7 +68,7 @@ wp_nav_menu(
 ?>
 	</nav>
 
-	<nav class="navbar navbar-expand-sm navbar-dark navbar-right bg-info">
+	<nav class="navbar navbar-expand-sm navbar-dark navbar-right bg-info d-none d-lg-block">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSocial" aria-controls="navbarSocial" aria-expanded="false" aria-abel="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 			<span class="navbar-toggler-icon"></span>
 		</button>
