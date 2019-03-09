@@ -12,6 +12,7 @@ class Codeat_Widget extends WPH_Widget {
         $args = array(
             'label'       => __( 'Codeat', 'understrap' ),
             'description' => __( 'My company', 'understrap' ),
+            'slug'        => 'codeat'
         );
         // Create widget
         $this->create_widget( $args );

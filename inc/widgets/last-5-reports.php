@@ -12,6 +12,7 @@ class Last_Reports_Widget extends WPH_Widget {
         $args = array(
             'label'       => __( 'Last Reports', 'understrap' ),
             'description' => __( 'Last 5 FOSS Reports', 'understrap' ),
+            'slug'        => 'last-reports'
         );
 
         // Configure the widget fields
@@ -23,7 +24,7 @@ class Last_Reports_Widget extends WPH_Widget {
                 'id'    => 'title',
                 'type'  => 'text',
                 'class' => 'widefat',
-                'std'   => __( 'Last reports', 'understrap' ),
+                'std'   => __( 'Last FOSS reports', 'understrap' ),
             ),
         );
         // Create widget
@@ -55,7 +56,7 @@ class Last_Reports_Widget extends WPH_Widget {
 		$catquery = new WP_Query( $wpq );
 		while ( $catquery->have_posts() ) {
 			$catquery->the_post();
-			$out .= '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>' . "\n";
+			$out .= '<li><a href="' . get_the_permalink() . '">' . str_replace( 'My free software and open source activities of ' , '', get_the_title() ) . '</a></li>' . "\n";
 		};
 		$out .= '</ul>';
 

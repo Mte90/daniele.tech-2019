@@ -12,6 +12,7 @@ class About_Me_Widget extends WPH_Widget {
         $args = array(
             'label'       => __( 'About Me', 'understrap' ),
             'description' => __( 'Me and Myself', 'understrap' ),
+            'slug'        => 'about-me'
         );
         // Create widget
         $this->create_widget( $args );
