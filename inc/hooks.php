@@ -218,28 +218,20 @@ if ( is_admin() ) {
     }
 }
 
-add_filter(
-    'the_content',
-    function( $content ) {
-        // crayon filter regex
-        $regex =
-            // opening tag, language identifier (optional)
-            '/<pre\s+class="lang:([a-z]+?)([^"]*)"\s*>' .
+add_filter('the_content', function($content){
+	// crayon filter regex
+	$regex =
+		// opening tag, language identifier (optional)
+		'/<pre\s+class="nums:false lang:([a-z]+?)([^"]*)"\s*>' .
 
-            // case insensitive, multiline
-            '/im';
+		// case insensitive, multiline
+		'/im';
 
-        // apply filter regex
-        return preg_replace_callback(
-            $regex,
-            function( $match ) {
-                return '<pre class="EnlighterJSRAW" data-enlighter-language="' . esc_attr( $match[1] ) . '">';
-            },
-            $content
-        );
-    },
-    1
-);
+	// apply filter regex
+	return preg_replace_callback($regex, function($match){
+		return '<pre class="EnlighterJSRAW" data-enlighter-linenumbers="false" data-enlighter-language="' . esc_attr($match[1]) . '">';
+	}, $content);
+}, 1);
 
 add_action( 'wp_enqueue_scripts', function() {
 	if ( is_front_page() || is_archive() ) {

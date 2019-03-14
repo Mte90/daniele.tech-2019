@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2019-03-09 15:15+0100\n"
-"PO-Revision-Date: 2019-03-09 15:16+0100\n"
+"POT-Creation-Date: 2019-03-14 19:39+0100\n"
+"PO-Revision-Date: 2019-03-14 19:40+0100\n"
 "Last-Translator: Mte90 <mte90net@gmail.com>\n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -207,8 +207,9 @@ msgid "Left & Right sidebars"
 msgstr ""
 
 #: inc/customizer.php:127
+#, fuzzy
 msgid "No sidebar"
-msgstr ""
+msgstr "Barra Laterale"
 
 #: inc/extras.php:97
 msgid "Post navigation"
@@ -317,8 +318,9 @@ msgid "Not found"
 msgstr "Non trovato"
 
 #: inc/hooks.php:107 inc/hooks.php:144
+#, fuzzy
 msgid "Not found in Trash"
-msgstr ""
+msgstr "Nessun %s trovato nel Cestino"
 
 #: inc/hooks.php:110
 #, fuzzy
@@ -340,8 +342,9 @@ msgid "Books Review"
 msgstr "Recensione libri"
 
 #: inc/hooks.php:147
+#, fuzzy
 msgid "books-review"
-msgstr ""
+msgstr "Recensione libri"
 
 #: inc/pagination.php:25
 msgid "&laquo;"
@@ -508,7 +511,7 @@ msgid ""
 msgstr ""
 "Sembra che non troviamo quello che cerchi. Forse una ricerca può aiutare."
 
-#: loop-templates/content-page.php:30 loop-templates/content-single.php:38
+#: loop-templates/content-page.php:30 loop-templates/content-single.php:45
 #: loop-templates/content.php:41
 msgid "Pages:"
 msgstr "Pagine:"
@@ -516,6 +519,16 @@ msgstr "Pagine:"
 #: loop-templates/content-page.php:40
 msgid "Edit"
 msgstr "Modifica"
+
+#: loop-templates/content-single.php:36
+msgid ""
+"This is a review of a book that I read and I want to suggest. I am not "
+"getting money of it also because I don't put links of online shops. It is "
+"not a professional review!"
+msgstr ""
+"Questa é una recensione di un libro che ho letto e che voglio consigliare. "
+"Non ci guadagno anche perché non metto link per acquistarlo. Non è una "
+"recensione professionale!"
 
 #: search.php:37
 #, php-format

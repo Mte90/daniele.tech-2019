@@ -19,7 +19,9 @@ img.wp-smiley, img.emoji, .codeat h3 img {
 }
 
 .entry-content p {
-	word-break:break-all;
+	word-break:break-word;
+	word-wrap: break-word;
+	hyphens: auto;
 }
 
 .entry-header {

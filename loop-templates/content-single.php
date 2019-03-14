@@ -30,7 +30,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="entry-content">
 
-		<?php the_content(); ?>
+		<?php
+			if ( get_post_type( get_the_ID() ) === 'books-review' ) {
+				echo '<div class="alert alert-success" role="alert">';
+				_e( 'This is a review of a book that I read and I want to suggest. I am not getting money of it also because I don\'t put links of online shops. It is not a professional review!', 'understrap' );
+				echo '</div>';
+			}
+			the_content();
+		?>
 
 <?php
 wp_link_pages(

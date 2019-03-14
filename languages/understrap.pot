@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2019-03-09 15:15+0100\n"
+"POT-Creation-Date: 2019-03-14 19:39+0100\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -452,13 +452,20 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: loop-templates/content-page.php:30 loop-templates/content-single.php:38
+#: loop-templates/content-page.php:30 loop-templates/content-single.php:45
 #: loop-templates/content.php:41
 msgid "Pages:"
 msgstr ""
 
 #: loop-templates/content-page.php:40
 msgid "Edit"
+msgstr ""
+
+#: loop-templates/content-single.php:36
+msgid ""
+"This is a review of a book that I read and I want to suggest. I am not "
+"getting money of it also because I don't put links of online shops. It is "
+"not a professional review!"
 msgstr ""
 
 #: search.php:37
