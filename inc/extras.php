@@ -137,7 +137,7 @@ function get_home_photo_carousel() {
 	$html   = '';
 	$active = ' active';
 	foreach ( $photos as &$photo ) {
-		$html  .= '<div class="carousel-item' . $active . '" data-interval="2500">
+		$html  .= '<div class="carousel-item' . $active . '" data-interval="2600">
 			<img src="' . str_replace( get_template_directory(), get_stylesheet_directory_uri(), $photo ) . '" />
 			</div>';
 		$active = '';
@@ -160,6 +160,7 @@ function get_last_5_from_cat( $id ) {
 		'order'            => 'DESC',
 		'orderby'          => 'date',
 		'category__not_in' => 272,
+		'lang'			 => 'it,en',
 	);
 	$catquery = new WP_Query( $args );
 
@@ -179,6 +180,7 @@ function get_last_5_from_guestpost() {
 		'posts_per_page' => 5,
 		'order'          => 'DESC',
 		'orderby'        => 'date',
+		'lang'			 => 'it,en',
 	);
 	$catquery = new WP_Query( $args );
 
@@ -198,6 +200,7 @@ function get_last_5_from_books() {
 		'posts_per_page' => 5,
 		'order'          => 'DESC',
 		'orderby'        => 'date',
+		'lang'			 => 'it,en',
 	);
 	$catquery = new WP_Query( $args );
 
