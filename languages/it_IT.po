@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2019-03-14 19:39+0100\n"
-"PO-Revision-Date: 2019-04-04 15:45+0200\n"
+"POT-Creation-Date: 2019-05-31 11:44+0200\n"
+"PO-Revision-Date: 2019-05-31 11:45+0200\n"
 "Last-Translator: Mte90 <mte90net@gmail.com>\n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -55,15 +55,6 @@ msgid ""
 msgstr ""
 "Sembra che nulla sia stato trovato a questo indirizzo. Magari prova uno dei "
 "link sotto o una ricerca?"
-
-#: 404.php:47
-msgid "Most Used Categories"
-msgstr "Categorie più utilizzate"
-
-#: 404.php:70
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Prova a cercare tra gli archivi mensili. %1$s"
 
 #: author.php:39
 msgid "About:"
@@ -225,11 +216,16 @@ msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
-#: inc/extras.php:175
+#: inc/extras.php:173 inc/extras.php:194 inc/extras.php:215
+#: inc/widgets/last-5-reports.php:63
+msgid "Archive"
+msgstr "Archivio"
+
+#: inc/extras.php:178
 msgid "My Guest Posts"
 msgstr "I miei guest post"
 
-#: inc/extras.php:194
+#: inc/extras.php:199
 msgid "Books Reviews"
 msgstr "Recensione libri"
 
@@ -441,11 +437,11 @@ msgstr "Io e me stesso"
 
 #: inc/widgets/about-me.php:36
 msgid ""
-"Full Stack Developer, OpenSource addicted, Community Lover. Involved in "
-"WordPress, ClassicPress and Mozilla projects."
+"Full Stack Developer, OpenSource addicted. Involved in WordPress, "
+"ClassicPress and Mozilla projects."
 msgstr ""
-"Sviluppatore Full Stack, drogato di OpenSource. Partecipo come contributor "
-"in WordPress, ClassicPress e progetti Mozilla."
+"Sviluppatore Full Stack, drogato di OpenSource. Contributor in WordPress, "
+"ClassicPress e progetti Mozilla."
 
 #: inc/widgets/codeat.php:13
 msgid "Codeat"
@@ -457,13 +453,13 @@ msgstr "La mia azienda"
 
 #: inc/widgets/codeat.php:36
 msgid ""
-"My <a href=\"https://codeat.co\">WebAgency in Rome</a> about WordPress and "
-"marketing. We work on freemium plugin development and website/application "
+"My <a href=\"https://codeat.co\">WebAgency in Rome</a> about WordPress "
+"development. We work on freemium plugin development and website/application "
 "customization."
 msgstr ""
 "La mia <a href=\"https://codeat.co\">Web Agency a Roma</a> riguardo "
-"WordPress e marketing. Ci occupiamo di sviluppo di plugin freemium e "
-"personalizzazione di siti internet e applicazioni."
+"WordPress. Ci occupiamo di sviluppo di plugin freemium e personalizzazione "
+"di siti internet e applicativi."
 
 #: inc/widgets/last-5-reports.php:13
 msgid "Last Reports"
@@ -480,10 +476,6 @@ msgstr "Titolo"
 #: inc/widgets/last-5-reports.php:27
 msgid "Last FOSS reports"
 msgstr "Ultimi resoconti FOSS"
-
-#: inc/widgets/last-5-reports.php:61
-msgid "Archive"
-msgstr "Archivio"
 
 #: loop-templates/content-none.php:19
 msgid "Nothing Found"
@@ -542,6 +534,12 @@ msgstr "Cerca"
 #: searchform.php:17
 msgid "Search &hellip;"
 msgstr "Cerca &hellip;"
+
+#~ msgid "Most Used Categories"
+#~ msgstr "Categorie più utilizzate"
+
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "Prova a cercare tra gli archivi mensili. %1$s"
 
 #, fuzzy
 #~| msgctxt "post date"
