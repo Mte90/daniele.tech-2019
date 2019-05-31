@@ -29,7 +29,7 @@ class Codeat_Widget extends WPH_Widget {
     public function widget( $args, $instance ) {
         $out  = $args[ 'before_widget' ];
         $out .= $args[ 'before_title' ];
-		$out .= 'Codeat <img src="' . get_template_directory_uri() . '/img/codeat.svg">';
+		$out .= 'Codeat <img alt="Codeat logo" src="' . get_template_directory_uri() . '/img/codeat.svg">';
 		$out .= $args[ 'after_title' ];
 
 		$out .= '<p>';

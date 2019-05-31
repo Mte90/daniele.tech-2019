@@ -138,7 +138,7 @@ function get_home_photo_carousel() {
 	$active = ' active';
 	foreach ( $photos as &$photo ) {
 		$html  .= '<div class="carousel-item' . $active . '" data-interval="2600">
-			<img src="' . str_replace( get_template_directory(), get_stylesheet_directory_uri(), $photo ) . '" />
+			<img alt="Photo of me" src="' . str_replace( get_template_directory(), get_stylesheet_directory_uri(), $photo ) . '" />
 			</div>';
 		$active = '';
 	}
