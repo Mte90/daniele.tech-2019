@@ -169,6 +169,8 @@ function get_last_5_from_cat( $id ) {
 		$out .= '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>' . "\n";
 	};
 	$out .= '</ul>';
+
+	$out .= '<span class="btn btn-success archive"><a href="' . get_category_link( $pl_id ) . '">' . __( 'Archive', 'understrap' ) . '</a></span>' . "\n";
 	return $out;
 }
 
@@ -189,6 +191,7 @@ function get_last_5_from_guestpost() {
 		$out .= '<li><a href="' . guest_post_permalink( get_the_permalink() ) . '">' . get_the_title() . '</a></li>' . "\n";
 	};
 	$out .= '</ul>';
+	$out .= '<span class="btn btn-success archive"><a href="' . get_category_link( $pl_id ) . '">' . __( 'Archive', 'understrap' ) . '</a></span>' . "\n";
 	return $out;
 }
 
@@ -209,5 +212,6 @@ function get_last_5_from_books() {
 		$out .= '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>' . "\n";
 	};
 	$out .= '</ul>';
+	$out .= '<span class="btn btn-success archive"><a href="' . get_category_link( $pl_id ) . '">' . __( 'Archive', 'understrap' ) . '</a></span>' . "\n";
 	return $out;
 }
