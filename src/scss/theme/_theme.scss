@@ -42,6 +42,17 @@ img.wp-smiley, img.emoji, .codeat h3 img {
 	margin:10px;
 }
 
+ol.comment-list, ol.children {
+	padding-left: 0px;
+	li {
+		list-style:none;
+	}
+}
+
+ol.children {
+	padding-left: 20px;
+}
+
 .nav-link span {
 	display: none;
 }
