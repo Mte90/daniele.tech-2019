@@ -63,6 +63,8 @@ function gfont_resource_hints( $hints, $relation_type ) {
 		$hints[] = '//fonts.gstatic.com';
 		$hints[] = '//cdnjs.cloudflare.com';
 		$hints[] = '//mte90-mte90net.netdna-ssl.com';
+		$hints[] = '//www.google.com';
+		$hints[] = '//stats.g.doubleclick.net';
 	}
 
 	return $hints;
