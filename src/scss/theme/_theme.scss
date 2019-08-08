@@ -19,7 +19,7 @@ img.wp-smiley, img.emoji, .codeat h3 img {
 }
 
 .entry-content p {
-	word-break:break-word;
+	word-break: break-word;
 	word-wrap: break-word;
 	hyphens: auto;
 }
@@ -89,7 +89,7 @@ ol.children {
 }
 
 .navbar-right, .edit-link {
-	float:right;
+	float: right;
 }
 
 // Extracted from http://l-lin.github.io/font-awesome-animation/
@@ -112,7 +112,7 @@ ol.children {
 }
 
 .entry-header li {
-	display:inline;
+	display: inline;
 }
 
 .widget_polylang li {
@@ -123,7 +123,7 @@ ol.children {
 }
 
 .entry-meta {
-	text-align:center;
+	text-align: center;
 }
 
 .about-me p img {
@@ -219,3 +219,6 @@ iframe {
 	border: 1px solid #ced4da;
 }
 
+.aligncenter {
+	display: block;
+}
