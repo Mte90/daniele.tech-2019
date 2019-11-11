@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2019-10-04 14:13+0200\n"
-"PO-Revision-Date: 2019-10-04 14:14+0200\n"
+"POT-Creation-Date: 2019-11-11 15:25+0100\n"
+"PO-Revision-Date: 2019-11-11 15:26+0100\n"
 "Last-Translator: Mte90 <mte90net@gmail.com>\n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -452,7 +452,7 @@ msgstr "Informazioni"
 msgid "Me and Myself"
 msgstr "Io e me stesso"
 
-#: dist/inc/widgets/about-me.php:36 inc/widgets/about-me.php:36
+#: dist/inc/widgets/about-me.php:36
 msgid ""
 "Full Stack Developer, OpenSource addicted. Involved in WordPress, "
 "ClassicPress and Mozilla projects."
@@ -555,6 +555,14 @@ msgstr "Cerca"
 #: dist/searchform.php:17 searchform.php:17
 msgid "Search &hellip;"
 msgstr "Cerca &hellip;"
+
+#: inc/widgets/about-me.php:36
+msgid ""
+"Full Stack Developer, OpenSource addicted. Involved in WordPress and Mozilla "
+"projects (a lot)."
+msgstr ""
+"Sviluppatore Full Stack, drogato di OpenSource. Contributor in WordPress e "
+"progetti Mozilla (parecchio)."
 
 #: loop-templates/content-single.php:42
 msgid ""
