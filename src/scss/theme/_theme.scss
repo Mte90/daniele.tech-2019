@@ -33,6 +33,7 @@ img.wp-smiley, img.emoji, .codeat h3 img {
 .fa, .fab {
 	font-size: 40px;
 	color: transparent;
+	font-weight: lighter !important;
 	&::before {
 		color: white;
 	}
