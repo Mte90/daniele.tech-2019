@@ -37,15 +37,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<?php echo get_last_5_from_cat( 75 ); ?>
 							</div>
 							<div class="col-md-6">
-								<?php echo get_last_5_from_cat( 85 ); ?>
+								<?php echo get_last_5_from_cat( 290 ); ?>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-6">
-								<?php echo get_last_5_from_books(); ?>
+								<?php echo get_last_5_from_cat( 85 ); ?>
 							</div>
 							<div class="col-md-6">
-								<?php echo get_last_5_from_guestpost(); ?>
+								<?php echo get_last_5_from_cat( 139 ); ?>
 							</div>
 						</div>
 					</div>
