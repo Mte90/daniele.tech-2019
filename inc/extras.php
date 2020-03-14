@@ -152,6 +152,9 @@ function get_last_5_from_cat( $id ) {
 	if(function_exists('pll_get_term')) {
 		$pl_id    = pll_get_term( $id );
 	}
+	if(empty($pl_id)) {
+		$pl_id = $id;
+	}
 	$out      = '<h3>' . get_cat_name( $pl_id ) . '</h3>';
 	$out     .= '<ul>';
 	$args     = array(
