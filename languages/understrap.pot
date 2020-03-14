@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2019-11-11 15:25+0100\n"
+"POT-Creation-Date: 2020-03-14 19:39+0100\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.3\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
@@ -404,8 +404,8 @@ msgstr ""
 
 #: dist/inc/widgets/about-me.php:36
 msgid ""
-"Full Stack Developer, OpenSource addicted. Involved in WordPress, "
-"ClassicPress and Mozilla projects."
+"Full Stack Developer, OpenSource addicted. Involved in WordPress and Mozilla "
+"projects (a lot)."
 msgstr ""
 
 #: dist/inc/widgets/codeat.php:13 inc/widgets/codeat.php:13
@@ -462,7 +462,7 @@ msgid ""
 msgstr ""
 
 #: dist/loop-templates/content-page.php:30
-#: dist/loop-templates/content-single.php:45 dist/loop-templates/content.php:41
+#: dist/loop-templates/content-single.php:49 dist/loop-templates/content.php:41
 #: loop-templates/content-page.php:30 loop-templates/content-single.php:49
 #: loop-templates/content.php:41
 msgid "Pages:"
@@ -478,6 +478,15 @@ msgid ""
 "This is a review of a book that I read and I want to suggest. I am not "
 "getting money of it also because I don't put links of online shops. It is "
 "not a professional review!"
+msgstr ""
+
+#: dist/loop-templates/content-single.php:42
+#: loop-templates/content-single.php:42
+msgid ""
+"I published a free and open source book... about \"Contribute to Open "
+"Source: the right way\"! You can <a href=\"https://daniele.tech/2019/10/"
+"contribute-to-opensource-the-right-way-book/\">download your copy for free</"
+"a> :-D"
 msgstr ""
 
 #: dist/search.php:37 search.php:37
@@ -496,14 +505,6 @@ msgstr ""
 
 #: inc/widgets/about-me.php:36
 msgid ""
-"Full Stack Developer, OpenSource addicted. Involved in WordPress and Mozilla "
-"projects (a lot)."
-msgstr ""
-
-#: loop-templates/content-single.php:42
-msgid ""
-"I published a free and open source book... about \"Contribute to Open "
-"Source: the right way\"! You can <a href=\"https://daniele.tech/2019/10/"
-"contribute-to-opensource-the-right-way-book/\">download your copy for free</"
-"a> :-D"
+"Full Stack Developer, OpenSource addicted. Involved a lot in WordPress and "
+"Mozilla projects."
 msgstr ""
