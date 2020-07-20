@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2020-03-14 19:39+0100\n"
+"POT-Creation-Date: 2020-07-20 12:34+0200\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
@@ -25,44 +25,43 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 "X-Poedit-SearchPathExcluded-2: src\n"
 
-#: 404.php:31 dist/404.php:31
+#: 404.php:31
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:37 dist/404.php:37
+#: 404.php:37
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: author.php:39 dist/author.php:39
+#: author.php:39
 msgid "About:"
 msgstr ""
 
-#: author.php:48 dist/author.php:48 dist/inc/custom-comments.php:38
-#: inc/custom-comments.php:38
+#: author.php:48 inc/custom-comments.php:38
 msgid "Website"
 msgstr ""
 
-#: author.php:55 dist/author.php:55
+#: author.php:55
 msgid "Profile"
 msgstr ""
 
-#: author.php:75 dist/author.php:75
+#: author.php:75
 msgid "Permanent Link:"
 msgstr ""
 
-#: author.php:80 dist/author.php:80
+#: author.php:80
 msgid "in"
 msgstr ""
 
-#: comments.php:38 dist/comments.php:38
+#: comments.php:38
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr ""
 
-#: comments.php:45 dist/comments.php:45
+#: comments.php:45
 #, php-format
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
@@ -70,409 +69,390 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:63 comments.php:98 dist/comments.php:63 dist/comments.php:98
+#: comments.php:63 comments.php:98
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:67 comments.php:102 dist/comments.php:67 dist/comments.php:102
+#: comments.php:67 comments.php:102
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:73 comments.php:108 dist/comments.php:73 dist/comments.php:108
+#: comments.php:73 comments.php:108
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:123 dist/comments.php:123
+#: comments.php:123
 msgid "Comments are closed."
 msgstr ""
 
-#: dist/header.php:32 header.php:32
+#: header.php:32
 msgid "Skip to content"
 msgstr ""
 
-#: dist/header.php:51 dist/header.php:72 header.php:51 header.php:72
+#: header.php:51 header.php:72
 msgid "Toggle navigation"
 msgstr ""
 
-#: dist/inc/class-wp-bootstrap-navwalker.php:370
 #: inc/class-wp-bootstrap-navwalker.php:370
 msgid "Add a menu"
 msgstr ""
 
-#: dist/inc/custom-comments.php:32 inc/custom-comments.php:32
+#: inc/custom-comments.php:32
 msgid "Name"
 msgstr ""
 
-#: dist/inc/custom-comments.php:35 inc/custom-comments.php:35
+#: inc/custom-comments.php:35
 msgid "Email"
 msgstr ""
 
-#: dist/inc/custom-comments.php:42 inc/custom-comments.php:42
+#: inc/custom-comments.php:42
 msgid ""
 "Save my name, email, and website in this browser for the next time I comment"
 msgstr ""
 
-#: dist/inc/custom-comments.php:63 inc/custom-comments.php:63
+#: inc/custom-comments.php:63
 msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: dist/inc/custom-header.php:52 inc/custom-header.php:52
+#: inc/custom-header.php:52
 msgid "Default Header Image"
 msgstr ""
 
-#: dist/inc/customizer.php:43 inc/customizer.php:43
+#: inc/customizer.php:43
 msgid "Theme Layout Settings"
 msgstr ""
 
-#: dist/inc/customizer.php:45 inc/customizer.php:45
+#: inc/customizer.php:45
 msgid "Container width and sidebar defaults"
 msgstr ""
 
-#: dist/inc/customizer.php:85 inc/customizer.php:85
+#: inc/customizer.php:85
 msgid "Container Width"
 msgstr ""
 
-#: dist/inc/customizer.php:86 inc/customizer.php:86
+#: inc/customizer.php:86
 msgid "Choose between Bootstrap's container and container-fluid"
 msgstr ""
 
-#: dist/inc/customizer.php:91 inc/customizer.php:91
+#: inc/customizer.php:91
 msgid "Fixed width container"
 msgstr ""
 
-#: dist/inc/customizer.php:92 inc/customizer.php:92
+#: inc/customizer.php:92
 msgid "Full width container"
 msgstr ""
 
-#: dist/inc/customizer.php:114 inc/customizer.php:114
+#: inc/customizer.php:114
 msgid "Sidebar Positioning"
 msgstr ""
 
-#: dist/inc/customizer.php:116 inc/customizer.php:116
+#: inc/customizer.php:116
 msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
 
-#: dist/inc/customizer.php:124 inc/customizer.php:124
+#: inc/customizer.php:124
 msgid "Right sidebar"
 msgstr ""
 
-#: dist/inc/customizer.php:125 inc/customizer.php:125
+#: inc/customizer.php:125
 msgid "Left sidebar"
 msgstr ""
 
-#: dist/inc/customizer.php:126 inc/customizer.php:126
+#: inc/customizer.php:126
 msgid "Left & Right sidebars"
 msgstr ""
 
-#: dist/inc/customizer.php:127 inc/customizer.php:127
+#: inc/customizer.php:127
 msgid "No sidebar"
 msgstr ""
 
-#: dist/inc/extras.php:97 inc/extras.php:97
+#: inc/extras.php:97
 msgid "Post navigation"
 msgstr ""
 
-#: dist/inc/extras.php:101 inc/extras.php:101
+#: inc/extras.php:101
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr ""
 
-#: dist/inc/extras.php:105 inc/extras.php:105
+#: inc/extras.php:105
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
-#: dist/inc/extras.php:173 dist/inc/extras.php:194 dist/inc/extras.php:215
-#: dist/inc/widgets/last-5-reports.php:63 inc/extras.php:173 inc/extras.php:194
-#: inc/extras.php:215 inc/widgets/last-5-reports.php:63
+#: inc/extras.php:176 inc/extras.php:197 inc/extras.php:218
+#: inc/widgets/last-5-reports.php:63
 msgid "Archive"
 msgstr ""
 
-#: dist/inc/extras.php:178 inc/extras.php:178
+#: inc/extras.php:181
 msgid "My Guest Posts"
 msgstr ""
 
-#: dist/inc/extras.php:199 inc/extras.php:199
+#: inc/extras.php:202
 msgid "Books Reviews"
 msgstr ""
 
-#: dist/inc/hooks.php:30 inc/hooks.php:30
+#: inc/hooks.php:30
 msgid "https://www.classicpress.net/"
 msgstr ""
 
-#: dist/inc/hooks.php:33 inc/hooks.php:33
+#: inc/hooks.php:33
 #, php-format
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: dist/inc/hooks.php:38 inc/hooks.php:38
+#: inc/hooks.php:38
 #, php-format
 msgid "%1$sTheme%2$s by Daniele Scasciafratte based on understrap"
 msgstr ""
 
-#: dist/inc/hooks.php:44 inc/hooks.php:44
+#: inc/hooks.php:44
 #, php-format
 msgid "CDN offered by %1$s"
 msgstr ""
 
-#: dist/inc/hooks.php:81 dist/inc/hooks.php:90 inc/hooks.php:81
-#: inc/hooks.php:90
+#: inc/hooks.php:81 inc/hooks.php:90
 msgid "Link"
 msgstr ""
 
-#: dist/inc/hooks.php:99 inc/hooks.php:99
+#: inc/hooks.php:99
 msgctxt "Post Type General Name"
 msgid "Guest Posts"
 msgstr ""
 
-#: dist/inc/hooks.php:100 inc/hooks.php:100
+#: inc/hooks.php:100
 msgctxt "Post Type Singular Name"
 msgid "Guest Post"
 msgstr ""
 
-#: dist/inc/hooks.php:101 dist/inc/hooks.php:115 inc/hooks.php:101
-#: inc/hooks.php:115
+#: inc/hooks.php:101 inc/hooks.php:115
 msgid "Guest Post"
 msgstr ""
 
-#: dist/inc/hooks.php:102 dist/inc/hooks.php:139 inc/hooks.php:102
-#: inc/hooks.php:139
+#: inc/hooks.php:102 inc/hooks.php:139
 msgid "Parent Item:"
 msgstr ""
 
-#: dist/inc/hooks.php:103 dist/inc/hooks.php:140 inc/hooks.php:103
-#: inc/hooks.php:140
+#: inc/hooks.php:103 inc/hooks.php:140
 msgid "All Items"
 msgstr ""
 
-#: dist/inc/hooks.php:104 dist/inc/hooks.php:141 inc/hooks.php:104
-#: inc/hooks.php:141
+#: inc/hooks.php:104 inc/hooks.php:141
 msgid "View Item"
 msgstr ""
 
-#: dist/inc/hooks.php:105 dist/inc/hooks.php:142 inc/hooks.php:105
-#: inc/hooks.php:142
+#: inc/hooks.php:105 inc/hooks.php:142
 msgid "Add New Item"
 msgstr ""
 
-#: dist/inc/hooks.php:106 dist/inc/hooks.php:143 inc/hooks.php:106
-#: inc/hooks.php:143
+#: inc/hooks.php:106 inc/hooks.php:143
 msgid "Add New"
 msgstr ""
 
-#: dist/inc/hooks.php:107 dist/inc/hooks.php:144 inc/hooks.php:107
-#: inc/hooks.php:144
+#: inc/hooks.php:107 inc/hooks.php:144
 msgid "Edit Item"
 msgstr ""
 
-#: dist/inc/hooks.php:108 dist/inc/hooks.php:145 inc/hooks.php:108
-#: inc/hooks.php:145
+#: inc/hooks.php:108 inc/hooks.php:145
 msgid "Update Item"
 msgstr ""
 
-#: dist/inc/hooks.php:109 dist/inc/hooks.php:146 inc/hooks.php:109
-#: inc/hooks.php:146
+#: inc/hooks.php:109 inc/hooks.php:146
 msgid "Search Item"
 msgstr ""
 
-#: dist/inc/hooks.php:110 dist/inc/hooks.php:147 inc/hooks.php:110
-#: inc/hooks.php:147
+#: inc/hooks.php:110 inc/hooks.php:147
 msgid "Not found"
 msgstr ""
 
-#: dist/inc/hooks.php:111 dist/inc/hooks.php:148 inc/hooks.php:111
-#: inc/hooks.php:148
+#: inc/hooks.php:111 inc/hooks.php:148
 msgid "Not found in Trash"
 msgstr ""
 
-#: dist/inc/hooks.php:114 inc/hooks.php:114
+#: inc/hooks.php:114
 msgid "guest_post"
 msgstr ""
 
-#: dist/inc/hooks.php:136 inc/hooks.php:136
+#: inc/hooks.php:136
 msgctxt "Post Type General Name"
 msgid "Books"
 msgstr ""
 
-#: dist/inc/hooks.php:137 inc/hooks.php:137
+#: inc/hooks.php:137
 msgctxt "Post Type Singular Name"
 msgid "Book"
 msgstr ""
 
-#: dist/inc/hooks.php:138 dist/inc/hooks.php:152 inc/hooks.php:138
-#: inc/hooks.php:152
+#: inc/hooks.php:138 inc/hooks.php:152
 msgid "Books Review"
 msgstr ""
 
-#: dist/inc/hooks.php:151 inc/hooks.php:151
+#: inc/hooks.php:151
 msgid "books-review"
 msgstr ""
 
-#: dist/inc/pagination.php:25 inc/pagination.php:25
+#: inc/pagination.php:25
 msgid "&laquo;"
 msgstr ""
 
-#: dist/inc/pagination.php:26 inc/pagination.php:26
+#: inc/pagination.php:26
 msgid "&raquo;"
 msgstr ""
 
-#: dist/inc/pagination.php:27 inc/pagination.php:27
+#: inc/pagination.php:27
 msgid "Posts navigation"
 msgstr ""
 
-#: dist/inc/setup.php:49 inc/setup.php:49
+#: inc/setup.php:49
 msgid "Primary Menu"
 msgstr ""
 
-#: dist/inc/setup.php:50 inc/setup.php:50
+#: inc/setup.php:50
 msgid "Social Menu"
 msgstr ""
 
-#: dist/inc/setup.php:133 inc/setup.php:133
+#: inc/setup.php:133
 msgid "Read More..."
 msgstr ""
 
-#: dist/inc/template-tags.php:46 dist/inc/template-tags.php:52
 #: inc/template-tags.php:46 inc/template-tags.php:52
 msgid ", "
 msgstr ""
 
-#: dist/inc/template-tags.php:55 inc/template-tags.php:55
+#: inc/template-tags.php:55
 #, php-format
 msgid "Tagged %s"
 msgstr ""
 
-#: dist/inc/template-tags.php:60 inc/template-tags.php:60
+#: inc/template-tags.php:60
 msgid "Leave a comment"
 msgstr ""
 
-#: dist/inc/template-tags.php:60 inc/template-tags.php:60
+#: inc/template-tags.php:60
 msgid "1 Comment"
 msgstr ""
 
-#: dist/inc/template-tags.php:60 inc/template-tags.php:60
+#: inc/template-tags.php:60
 msgid "% Comments"
 msgstr ""
 
-#: dist/inc/template-tags.php:66 inc/template-tags.php:66
+#: inc/template-tags.php:66
 #, php-format
 msgid "Edit %s"
 msgstr ""
 
-#: dist/inc/widgets.php:100 inc/widgets.php:100
+#: inc/widgets.php:100
 msgid "Right Sidebar"
 msgstr ""
 
-#: dist/inc/widgets.php:102 inc/widgets.php:102
+#: inc/widgets.php:102
 msgid "Right sidebar widget area"
 msgstr ""
 
-#: dist/inc/widgets.php:112 inc/widgets.php:112
+#: inc/widgets.php:112
 msgid "Left Sidebar"
 msgstr ""
 
-#: dist/inc/widgets.php:114 inc/widgets.php:114
+#: inc/widgets.php:114
 msgid "Left sidebar widget area"
 msgstr ""
 
-#: dist/inc/widgets.php:124 inc/widgets.php:124
+#: inc/widgets.php:124
 msgid "Top Full"
 msgstr ""
 
-#: dist/inc/widgets.php:126 inc/widgets.php:126
+#: inc/widgets.php:126
 msgid "Full top widget with dynamic grid"
 msgstr ""
 
-#: dist/inc/widgets.php:136 inc/widgets.php:136
+#: inc/widgets.php:136
 msgid "Homepage"
 msgstr ""
 
-#: dist/inc/widgets.php:138 inc/widgets.php:138
+#: inc/widgets.php:138
 msgid "Homepage sidebar"
 msgstr ""
 
-#: dist/inc/widgets/about-me.php:13 inc/widgets/about-me.php:13
+#: inc/widgets/about-me.php:13
 msgid "About Me"
 msgstr ""
 
-#: dist/inc/widgets/about-me.php:14 inc/widgets/about-me.php:14
+#: inc/widgets/about-me.php:14
 msgid "Me and Myself"
 msgstr ""
 
-#: dist/inc/widgets/about-me.php:36
+#: inc/widgets/about-me.php:36
 msgid ""
-"Full Stack Developer, OpenSource addicted. Involved in WordPress and Mozilla "
-"projects (a lot)."
+"Full Stack Developer, OpenSource addicted. Involved a lot in WordPress and "
+"Mozilla projects."
 msgstr ""
 
-#: dist/inc/widgets/codeat.php:13 inc/widgets/codeat.php:13
+#: inc/widgets/codeat.php:13
 msgid "Codeat"
 msgstr ""
 
-#: dist/inc/widgets/codeat.php:14 inc/widgets/codeat.php:14
+#: inc/widgets/codeat.php:14
 msgid "My company"
 msgstr ""
 
-#: dist/inc/widgets/codeat.php:36 inc/widgets/codeat.php:36
+#: inc/widgets/codeat.php:36
 msgid ""
 "My <a href=\"https://codeat.co\">WebAgency in Rome</a> about WordPress "
 "development. We work on freemium plugin development and website/application "
 "customization."
 msgstr ""
 
-#: dist/inc/widgets/last-5-reports.php:13 inc/widgets/last-5-reports.php:13
+#: inc/widgets/last-5-reports.php:13
 msgid "Last Reports"
 msgstr ""
 
-#: dist/inc/widgets/last-5-reports.php:14 inc/widgets/last-5-reports.php:14
+#: inc/widgets/last-5-reports.php:14
 msgid "Last 5 FOSS Reports"
 msgstr ""
 
-#: dist/inc/widgets/last-5-reports.php:23 inc/widgets/last-5-reports.php:23
+#: inc/widgets/last-5-reports.php:23
 msgid "Title"
 msgstr ""
 
-#: dist/inc/widgets/last-5-reports.php:27 inc/widgets/last-5-reports.php:27
+#: inc/widgets/last-5-reports.php:27
 msgid "Last FOSS reports"
 msgstr ""
 
-#: dist/loop-templates/content-none.php:19 loop-templates/content-none.php:19
+#: loop-templates/content-none.php:19
 msgid "Nothing Found"
 msgstr ""
 
-#: dist/loop-templates/content-none.php:28 loop-templates/content-none.php:28
+#: loop-templates/content-none.php:28
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: dist/loop-templates/content-none.php:36 loop-templates/content-none.php:36
+#: loop-templates/content-none.php:36
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: dist/loop-templates/content-none.php:41 loop-templates/content-none.php:41
+#: loop-templates/content-none.php:41
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
 
-#: dist/loop-templates/content-page.php:30
-#: dist/loop-templates/content-single.php:49 dist/loop-templates/content.php:41
 #: loop-templates/content-page.php:30 loop-templates/content-single.php:49
 #: loop-templates/content.php:41
 msgid "Pages:"
 msgstr ""
 
-#: dist/loop-templates/content-page.php:40 loop-templates/content-page.php:40
+#: loop-templates/content-page.php:40
 msgid "Edit"
 msgstr ""
 
-#: dist/loop-templates/content-single.php:36
 #: loop-templates/content-single.php:36
 msgid ""
 "This is a review of a book that I read and I want to suggest. I am not "
@@ -480,31 +460,23 @@ msgid ""
 "not a professional review!"
 msgstr ""
 
-#: dist/loop-templates/content-single.php:42
 #: loop-templates/content-single.php:42
 msgid ""
 "I published a free and open source book... about \"Contribute to Open "
-"Source: the right way\"! You can <a href=\"https://daniele.tech/2019/10/"
-"contribute-to-opensource-the-right-way-book/\">download your copy for free</"
-"a> :-D"
+"Source: the right way\"! You can <a href=\"https://daniele.tech/2020/07/"
+"contribute-to-open-source-the-right-way-2nd-edition-download-the-free-open-"
+"book-now/\">download your copy for free</a> :-D"
 msgstr ""
 
-#: dist/search.php:37 search.php:37
+#: search.php:37
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: dist/searchform.php:14 dist/searchform.php:20 searchform.php:14
-#: searchform.php:20
+#: searchform.php:14 searchform.php:20
 msgid "Search"
 msgstr ""
 
-#: dist/searchform.php:17 searchform.php:17
+#: searchform.php:17
 msgid "Search &hellip;"
-msgstr ""
-
-#: inc/widgets/about-me.php:36
-msgid ""
-"Full Stack Developer, OpenSource addicted. Involved a lot in WordPress and "
-"Mozilla projects."
 msgstr ""
