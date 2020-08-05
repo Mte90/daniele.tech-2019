@@ -218,3 +218,45 @@ function get_last_5_from_books() {
 	$out .= '<span class="btn btn-success archive"><a href="' . get_category_link( $pl_id ) . '">' . __( 'Archive', 'understrap' ) . '</a></span>' . "\n";
 	return $out;
 }
+
+function gh_month_pr( $atts ){
+	$a = shortcode_atts( array(
+		'date_end' => '',
+		'date_before' => '',
+	), $atts );
+
+	if ( false === ( $output = get_transient( 'github_month_status_'. $a[ 'date_before' ] ) ) ) {
+		$url = "https://api.github.com/search/issues?q=is:pr%20created:>=" . $a[ 'date_before' ] . "%20updated:<=" . $a[ 'date_end' ] . "%20author:mte90";
+		$response = wp_remote_get( $url );
+		$repos = json_decode( wp_remote_retrieve_body( $response ) );
+
+		$output = '<ul>';
+
+		foreach ($repos->items as $repo) {
+			$output .= '<li>';
+			$output .= '<a href="' . $repo->html_url . '" target="_blank">';
+			$name = explode('/', $repo->html_url);
+			$output .= $name[3] . '/' . $name[4] . ' - ' . $repo->title;
+			$output .= '</a>';
+			$output .= '</li>';
+		}
+
+		$output .= '</ul>';
+		$url = "https://api.github.com/search/issues?q=is:issue%20created:>=" . $a[ 'date_before' ] . "%20updated:<=" . $a[ 'date_end' ] . "%20author:mte90";
+		$response = wp_remote_get( $url );
+		$repos = json_decode( wp_remote_retrieve_body( $response ) );
+		$closed = $open = 0;
+		foreach ($repos->items as $repo) {
+            if( $repo->state === 'closed' ) {
+                $closed++;
+            } else if( $repo->state === 'open' ) {
+                $open++;
+            }
+		}
+		$output .= '<a href="https://github.com/issues?q=archived%3Afalse+author%3AMte90+sort%3Aupdated-desc+created%3A%3E%3D' . $a[ 'date_before' ] . '+updated%3A%3C%3D' . $a[ 'date_end' ] . '+is%3Aissue+" target="_blank">This month I opened ' . $open . ' tickets and closed ' . $closed . '.</a><br>';
+		set_transient( 'github_month_status_' . $a[ 'date_before' ], $output, WEEK_IN_SECONDS);
+	}
+
+	return $output;
+}
+add_shortcode( 'gh_month_pr', 'gh_month_pr' );
