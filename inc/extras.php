@@ -223,9 +223,15 @@ function gh_month_pr( $atts ){
 	$a = shortcode_atts( array(
 		'date_end' => '',
 		'date_before' => '',
+		'month' => '',
 	), $atts );
+	if ( !empty( $a[ 'month' ] ) ) {
+		$dateString = date("Y") . '-' . $a[ 'month' ] . '-04';
+		$a[ 'date_before' ] = date("Y") . '-' . $a[ 'month' ] . '-01';
+		$a[ 'date_end' ] = date("Y-m-t", strtotime($dateString));
+	}
 
-	if ( false === ( $output = get_transient( 'github_month_status_'. $a[ 'date_before' ] ) ) ) {
+	if ( false === ( $output = get_transient( 'github_month_status_'. $a[ 'month' ] ) ) ) {
 		$url = "https://api.github.com/search/issues?q=is:pr%20created:>=" . $a[ 'date_before' ] . "%20updated:<=" . $a[ 'date_end' ] . "%20author:mte90";
 		$response = wp_remote_get( $url );
 		$repos = json_decode( wp_remote_retrieve_body( $response ) );
