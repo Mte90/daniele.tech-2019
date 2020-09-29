@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			the_content();
 
 			echo '<div class="alert alert-success" role="alert">';
-			_e( 'I published a free and open source book... about "Contribute to Open Source: the right way"! You can <a href="https://daniele.tech/2020/07/contribute-to-open-source-the-right-way-2nd-edition-download-the-free-open-book-now/">download your copy for free</a> :-D', 'understrap' );
+			_e( 'I published a free and open source book... <b>"Contribute to Open Source: the right way"</b>! You can <a href="https://daniele.tech/2020/07/contribute-to-open-source-the-right-way-2nd-edition-download-the-free-open-book-now/">download your copy for free</a> :-D', 'understrap' );
 			echo '</div>';
 		?>
 
