@@ -232,7 +232,7 @@ function gh_month_pr( $atts ){
 		$a[ 'date_end' ] = date("Y-m-t", strtotime($dateString));
 	}
 
-	if ( false === ( $output = get_transient( 'github_month_status_'. $a[ 'month' ] ) ) ) {
+	if ( false === ( $output = get_transient( 'github_month_status_'. $a[ 'month' ] . '_' . $a[ 'year' ] ) ) ) {
 		$url = "https://api.github.com/search/issues?q=is:pr%20created:>=" . $a[ 'date_before' ] . "%20updated:<=" . $a[ 'date_end' ] . "%20author:mte90";
 		$response = wp_remote_get( $url );
 		$repos = json_decode( wp_remote_retrieve_body( $response ) );
@@ -261,7 +261,7 @@ function gh_month_pr( $atts ){
             }
 		}
 		$output .= '<a href="https://github.com/issues?q=archived%3Afalse+author%3AMte90+sort%3Aupdated-desc+created%3A%3E%3D' . $a[ 'date_before' ] . '+updated%3A%3C%3D' . $a[ 'date_end' ] . '+is%3Aissue+" target="_blank">This month I opened ' . $open . ' tickets and closed ' . $closed . '.</a><br><br>';
-		set_transient( 'github_month_status_' . $a[ 'date_before' ], $output, WEEK_IN_SECONDS);
+		set_transient( 'github_month_status_' . $a[ 'month' ] . '_' . $a[ 'year' ], $output, WEEK_IN_SECONDS);
 	}
 
 	return $output;
