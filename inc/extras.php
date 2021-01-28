@@ -224,10 +224,11 @@ function gh_month_pr( $atts ){
 		'date_end' => '',
 		'date_before' => '',
 		'month' => '',
+		'year'  => date("Y")
 	), $atts );
 	if ( !empty( $a[ 'month' ] ) ) {
-		$dateString = date("Y") . '-' . $a[ 'month' ] . '-04';
-		$a[ 'date_before' ] = date("Y") . '-' . $a[ 'month' ] . '-01';
+		$dateString = $a[ 'year' ] . '-' . $a[ 'month' ] . '-04';
+		$a[ 'date_before' ] = $a[ 'year' ] . '-' . $a[ 'month' ] . '-01';
 		$a[ 'date_end' ] = date("Y-m-t", strtotime($dateString));
 	}
 
