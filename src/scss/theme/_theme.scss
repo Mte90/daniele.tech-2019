@@ -1,3 +1,8 @@
+blockquote {
+	  padding: 10px;
+	font-style: italic;
+}
+
 #sb_super_bar.default .sb_text-size a, #sb_super_bar.default .sb_text-size span, #sb_super_bar.default .sb_prev-next-posts .sb_next_post_info span.sb_category {
 	background-color:$blue;
 }
