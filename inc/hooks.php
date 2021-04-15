@@ -38,11 +38,6 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
 				esc_html__( '%1$sTheme%2$s by Daniele Scasciafratte based on understrap', 'understrap' ),
 				'<a href="https://github.com/Mte90/daniele.tech-2019">',
 				'</a>'
-			),
-			sprintf( // WPCS: XSS ok.
-				/* translators:*/
-				esc_html__( 'CDN offered by %1$s', 'understrap' ),
-				'<a href="https://www.maxcdn.com/">MaxCDN</a>'
 			)
 		);
 
