@@ -26,7 +26,7 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
 	 */
 	function understrap_add_site_info() {
 		$site_info = sprintf(
-			'<a href="%1$s">%2$s</a><span class="sep"> | </span>%3$s | %4$s',
+			'<a href="%1$s">%2$s</a><span class="sep"> | </span>%3$s',
 			esc_url( __( 'https://www.classicpress.net/', 'understrap' ) ),
 			sprintf(
 				/* translators:*/
