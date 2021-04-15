@@ -23,11 +23,9 @@ var paths = cfg.paths;
 export const styles = () => {
   return src([paths.devscss + 'theme.scss', paths.devscss + 'custom-editor-style.scss'])
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulpif(PRODUCTION, postcss([ autoprefixer ])))
-    .pipe(gulpif(PRODUCTION, cleanCss({compatibility:'ie8'})))
-    .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
+    .pipe(postcss([ autoprefixer ]))
+    .pipe(cleanCss({compatibility:'ie9'}))
     .pipe(dest(paths.css))
     .pipe(server.stream());
 }
@@ -63,32 +61,6 @@ export const copyAssets = (done) => {
 }
 
 export const clean = () => del(['dist']);
-
-export const dist = (done) => {
-	src( [
-		'**/*',
-		'!' + paths.node,
-		'!' + paths.node + '/**',
-		'!' + paths.dev,
-		'!' + paths.dev + '/**',
-		'!' + paths.dist,
-		'!' + paths.dist + '/**',
-		'!' + paths.distprod,
-		'!' + paths.distprod + '/**',
-		'!' + paths.sass,
-		'!' + paths.sass + '/**',
-		'!readme.md',
-		'!package.json',
-		'!package-lock.json',
-		'!gulpfile.js',
-		'!gulpconfig.json',
-		'!CHANGELOG.md',
-		'!jshintignore',
-		'*'
-	], { 'buffer': false } )
-		.pipe( dest( paths.dist ) );
-	done();
-}
 
 export const scripts = () => {
 	return src(paths.devjs + 'theme.js')
@@ -138,6 +110,6 @@ export const reload = done => {
 };
 
 export const dev = series(parallel(styles, images, scripts), serve, watchForChanges);
-export const build = series(clean, parallel(styles, images, scripts, dist));
+export const build = series(clean, parallel(styles, images, scripts));
 
 export default dev;

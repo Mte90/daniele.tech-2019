@@ -148,11 +148,14 @@ ol.children {
 }
 
 .widget h3 {
-	text-align:center;
+	text-align: center;
+}
+.widget h3 {
+	margin-top: 10px;
 }
 
 .widget.codeat a {
-	text-decoration:underline;
+	text-decoration: underline;
 }
 
 .widget.last-reports {
@@ -160,15 +163,15 @@ ol.children {
 }
 
 .widget_recent_entries li span {
-	display:block;
+	display: block;
 }
 
-#custom_html-2 .textwidget {
-	text-align:center;
+#custom_html-2 .textwidget, #text-2 div {
+	text-align: center;
 }
 
-#text-2 div {
-	text-align:center;
+#right-sidebar li a {
+    font-size: 14px;
 }
 
 .cat-links {

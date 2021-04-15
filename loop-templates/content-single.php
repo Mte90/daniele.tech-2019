@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<header class="entry-header">
 		<ul>
 		<?php
-		pll_the_languages( array( 'show_flags' => 1 ) );
+		pll_the_languages( array( 'show_flags' => 1, 'hide_if_no_translation' => 1, 'hide_current' => 1 ) );
 		echo '</ul>';
 		the_title( '<h1 class="entry-title">', '</h1>' );
 		?>
