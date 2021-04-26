@@ -220,6 +220,25 @@ iframe {
 	padding-bottom: 10px;
 }
 
+.comment-list li article {
+	border: 1px solid #ced4da;
+	padding: 10px;
+	margin-top:5px;
+}
+
+.comments-title {
+	font-size:14px;
+}
+
+.comment-author {
+	width: 40%;
+	float: left;
+}
+
+.comment-content {
+	clear: both;
+}
+
 .entry-footer {
 	border-top:1px solid #ced4da;
 	padding-top:10px;

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2020-09-29 12:16+0200\n"
+"POT-Creation-Date: 2021-04-26 12:24+0200\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
@@ -210,88 +210,83 @@ msgstr ""
 msgid "%1$sTheme%2$s by Daniele Scasciafratte based on understrap"
 msgstr ""
 
-#: inc/hooks.php:44
-#, php-format
-msgid "CDN offered by %1$s"
-msgstr ""
-
-#: inc/hooks.php:81 inc/hooks.php:90
+#: inc/hooks.php:76 inc/hooks.php:85
 msgid "Link"
 msgstr ""
 
-#: inc/hooks.php:99
+#: inc/hooks.php:94
 msgctxt "Post Type General Name"
 msgid "Guest Posts"
 msgstr ""
 
-#: inc/hooks.php:100
+#: inc/hooks.php:95
 msgctxt "Post Type Singular Name"
 msgid "Guest Post"
 msgstr ""
 
-#: inc/hooks.php:101 inc/hooks.php:115
+#: inc/hooks.php:96 inc/hooks.php:110
 msgid "Guest Post"
 msgstr ""
 
-#: inc/hooks.php:102 inc/hooks.php:139
+#: inc/hooks.php:97 inc/hooks.php:134
 msgid "Parent Item:"
 msgstr ""
 
-#: inc/hooks.php:103 inc/hooks.php:140
+#: inc/hooks.php:98 inc/hooks.php:135
 msgid "All Items"
 msgstr ""
 
-#: inc/hooks.php:104 inc/hooks.php:141
+#: inc/hooks.php:99 inc/hooks.php:136
 msgid "View Item"
 msgstr ""
 
-#: inc/hooks.php:105 inc/hooks.php:142
+#: inc/hooks.php:100 inc/hooks.php:137
 msgid "Add New Item"
 msgstr ""
 
-#: inc/hooks.php:106 inc/hooks.php:143
+#: inc/hooks.php:101 inc/hooks.php:138
 msgid "Add New"
 msgstr ""
 
-#: inc/hooks.php:107 inc/hooks.php:144
+#: inc/hooks.php:102 inc/hooks.php:139
 msgid "Edit Item"
 msgstr ""
 
-#: inc/hooks.php:108 inc/hooks.php:145
+#: inc/hooks.php:103 inc/hooks.php:140
 msgid "Update Item"
 msgstr ""
 
-#: inc/hooks.php:109 inc/hooks.php:146
+#: inc/hooks.php:104 inc/hooks.php:141
 msgid "Search Item"
 msgstr ""
 
-#: inc/hooks.php:110 inc/hooks.php:147
+#: inc/hooks.php:105 inc/hooks.php:142
 msgid "Not found"
 msgstr ""
 
-#: inc/hooks.php:111 inc/hooks.php:148
+#: inc/hooks.php:106 inc/hooks.php:143
 msgid "Not found in Trash"
 msgstr ""
 
-#: inc/hooks.php:114
+#: inc/hooks.php:109
 msgid "guest_post"
 msgstr ""
 
-#: inc/hooks.php:136
+#: inc/hooks.php:131
 msgctxt "Post Type General Name"
 msgid "Books"
 msgstr ""
 
-#: inc/hooks.php:137
+#: inc/hooks.php:132
 msgctxt "Post Type Singular Name"
 msgid "Book"
 msgstr ""
 
-#: inc/hooks.php:138 inc/hooks.php:152
+#: inc/hooks.php:133 inc/hooks.php:147
 msgid "Books Review"
 msgstr ""
 
-#: inc/hooks.php:151
+#: inc/hooks.php:146
 msgid "books-review"
 msgstr ""
 

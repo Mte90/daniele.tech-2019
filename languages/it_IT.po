@@ -4,9 +4,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2020-09-29 12:16+0200\n"
-"PO-Revision-Date: 2021-04-15 11:39+0200\n"
-"Last-Translator: Mte90 <mte90net@gmail.com>\n"
+"POT-Creation-Date: 2021-04-26 12:24+0200\n"
+"PO-Revision-Date: 2021-04-26 12:27+0200\n"
+"Last-Translator: mte90 <mte90net@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
@@ -15,12 +15,12 @@ msgstr ""
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.4.2\n"
-"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;__:1;"
-"_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;_x:1,2c;"
-"_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;"
-"esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;"
-"comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Lokalize 20.12.3\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;__:"
+"1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;_x:1"
+",2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;e"
+"sc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;comments"
+"_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: footer.php\n"
 "X-Poedit-SearchPath-1: header.php\n"
@@ -78,7 +78,7 @@ msgid "in"
 msgstr ""
 
 #: comments.php:38
-#, fuzzy, php-format
+#, php-format
 #| msgctxt "comments title"
 #| msgid "One thought on &ldquo;%2$s&rdquo;"
 #| msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
@@ -87,7 +87,7 @@ msgid "One thought on &ldquo;%s&rdquo;"
 msgstr "Un commento su &ldquo;%2$s&rdquo;"
 
 #: comments.php:45
-#, fuzzy, php-format
+#, php-format
 #| msgctxt "comments title"
 #| msgid "One thought on &ldquo;%2$s&rdquo;"
 #| msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
@@ -121,7 +121,7 @@ msgstr "Vai al contenuto"
 #, fuzzy
 #| msgid "Comment navigation"
 msgid "Toggle navigation"
-msgstr "Navigazione commenti"
+msgstr "Navigazione Toggle"
 
 #: inc/class-wp-bootstrap-navwalker.php:370
 msgid "Add a menu"
@@ -182,8 +182,8 @@ msgstr ""
 
 #: inc/customizer.php:116
 msgid ""
-"Set sidebar's default position. Can either be: right, left, both or none. Note: "
-"this can be overridden on individual pages."
+"Set sidebar's default position. Can either be: right, left, both or none. "
+"Note: this can be overridden on individual pages."
 msgstr ""
 
 #: inc/customizer.php:124
@@ -244,101 +244,96 @@ msgstr "Orgogliosamente realizzato con %s"
 msgid "%1$sTheme%2$s by Daniele Scasciafratte based on understrap"
 msgstr "%1$sTheme%2$s by Daniele Scasciafratte basato su understrap"
 
-#: inc/hooks.php:44
-#, php-format
-msgid "CDN offered by %1$s"
-msgstr "CDN offerta da %s"
-
-#: inc/hooks.php:81 inc/hooks.php:90
+#: inc/hooks.php:76 inc/hooks.php:85
 msgid "Link"
 msgstr "Link"
 
-#: inc/hooks.php:99
+#: inc/hooks.php:94
 #, fuzzy
 msgctxt "Post Type General Name"
 msgid "Guest Posts"
 msgstr "Guest Post"
 
-#: inc/hooks.php:100
+#: inc/hooks.php:95
 #, fuzzy
 msgctxt "Post Type Singular Name"
 msgid "Guest Post"
 msgstr "Guest Post"
 
-#: inc/hooks.php:101 inc/hooks.php:115
+#: inc/hooks.php:96 inc/hooks.php:110
 #, fuzzy
 msgid "Guest Post"
 msgstr "Guest Post"
 
-#: inc/hooks.php:102 inc/hooks.php:139
+#: inc/hooks.php:97 inc/hooks.php:134
 msgid "Parent Item:"
 msgstr ""
 
-#: inc/hooks.php:103 inc/hooks.php:140
+#: inc/hooks.php:98 inc/hooks.php:135
 msgid "All Items"
 msgstr ""
 
-#: inc/hooks.php:104 inc/hooks.php:141
+#: inc/hooks.php:99 inc/hooks.php:136
 #, fuzzy
 msgid "View Item"
 msgstr "Visualizza"
 
-#: inc/hooks.php:105 inc/hooks.php:142
+#: inc/hooks.php:100 inc/hooks.php:137
 #, fuzzy
 msgid "Add New Item"
 msgstr "Aggiungi"
 
-#: inc/hooks.php:106 inc/hooks.php:143
+#: inc/hooks.php:101 inc/hooks.php:138
 #, fuzzy
 msgid "Add New"
 msgstr "Aggiungi nuovo"
 
-#: inc/hooks.php:107 inc/hooks.php:144
+#: inc/hooks.php:102 inc/hooks.php:139
 #, fuzzy
 #| msgid "Edit %s"
 msgid "Edit Item"
 msgstr "Modifica"
 
-#: inc/hooks.php:108 inc/hooks.php:145
+#: inc/hooks.php:103 inc/hooks.php:140
 #, fuzzy
 msgid "Update Item"
 msgstr "Aggiorna"
 
-#: inc/hooks.php:109 inc/hooks.php:146
+#: inc/hooks.php:104 inc/hooks.php:141
 #, fuzzy
 #| msgid "Search"
 msgid "Search Item"
 msgstr "Cerca"
 
-#: inc/hooks.php:110 inc/hooks.php:147
+#: inc/hooks.php:105 inc/hooks.php:142
 msgid "Not found"
 msgstr "Non trovato"
 
-#: inc/hooks.php:111 inc/hooks.php:148
+#: inc/hooks.php:106 inc/hooks.php:143
 #, fuzzy
 msgid "Not found in Trash"
 msgstr "Nessun %s trovato nel Cestino"
 
-#: inc/hooks.php:114
+#: inc/hooks.php:109
 #, fuzzy
 msgid "guest_post"
 msgstr "Guest Post"
 
-#: inc/hooks.php:136
+#: inc/hooks.php:131
 msgctxt "Post Type General Name"
 msgid "Books"
 msgstr "Libri"
 
-#: inc/hooks.php:137
+#: inc/hooks.php:132
 msgctxt "Post Type Singular Name"
 msgid "Book"
 msgstr "Libro"
 
-#: inc/hooks.php:138 inc/hooks.php:152
+#: inc/hooks.php:133 inc/hooks.php:147
 msgid "Books Review"
 msgstr "Recensione libri"
 
-#: inc/hooks.php:151
+#: inc/hooks.php:146
 #, fuzzy
 msgid "books-review"
 msgstr "Recensione libri"
@@ -441,8 +436,8 @@ msgid ""
 "Full Stack Developer, OpenSource addicted. Involved a lot in WordPress and "
 "Mozilla projects."
 msgstr ""
-"Sviluppatore Full Stack, drogato di OpenSource. Contributor veterano WordPress "
-"e Mozilla. Ascolta il mio podcast!"
+"Sviluppatore Full Stack, drogato di OpenSource. Contributor veterano "
+"WordPress e Mozilla. Ascolta il mio podcast!"
 
 #: inc/widgets/codeat.php:13
 msgid "Codeat"
@@ -458,9 +453,9 @@ msgid ""
 "development. We work on freemium plugin development and website/application "
 "customization."
 msgstr ""
-"La mia <a href=\"https://codeat.co\">Web Agency a Roma</a> riguardo WordPress. "
-"Ci occupiamo di sviluppo di plugin freemium e personalizzazione di siti "
-"internet e applicativi."
+"La mia <a href=\"https://codeat.co\">Web Agency a Roma</a> riguardo "
+"WordPress. Ci occupiamo di sviluppo di plugin freemium e personalizzazione "
+"di siti internet e applicativi."
 
 #: inc/widgets/last-5-reports.php:13
 msgid "Last Reports"
@@ -484,7 +479,8 @@ msgstr "Nessun Risultato"
 
 #: loop-templates/content-none.php:28
 #, php-format
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "Pronto a pubblicare il tuo primo articolo? <a href=\"%1$s\">Inizia qui</a>."
 
@@ -493,14 +489,15 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Spiacente, ma non ci sono riscontri con i tuoi termini di ricerca. Per favore "
-"riprova con altre parole chiavi."
+"Spiacente, ma non ci sono riscontri con i tuoi termini di ricerca. Per "
+"favore riprova con altre parole chiavi."
 
 #: loop-templates/content-none.php:41
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
-"can help."
-msgstr "Sembra che non troviamo quello che cerchi. Forse una ricerca può aiutare."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Sembra che non troviamo quello che cerchi. Forse una ricerca può aiutare."
 
 #: loop-templates/content-page.php:30 loop-templates/content-single.php:49
 #: loop-templates/content.php:41
@@ -513,29 +510,25 @@ msgstr "Modifica"
 
 #: loop-templates/content-single.php:36
 msgid ""
-"This is a review of a book that I read and I want to suggest. I am not getting "
-"money of it also because I don't put links of online shops. It is not a "
-"professional review!"
+"This is a review of a book that I read and I want to suggest. I am not "
+"getting money of it also because I don't put links of online shops. It is "
+"not a professional review!"
 msgstr ""
-"Questa é una recensione di un libro che ho letto e che voglio consigliare. Non "
-"ci guadagno anche perché non metto link per acquistarlo. Non è una recensione "
-"professionale!"
+"Questa é una recensione di un libro che ho letto e che voglio consigliare. "
+"Non ci guadagno anche perché non metto link per acquistarlo. Non è una "
+"recensione professionale!"
 
 #: loop-templates/content-single.php:42
-#| msgid ""
-#| "I published a free and open source book... about \"Contribute to Open "
-#| "Source: the right way\"! You can <a href=\"https://daniele.tech/2019/10/"
-#| "contribute-to-opensource-the-right-way-book/\">download your copy for free</"
-#| "a> :-D"
 msgid ""
-"I published a free and open source book... <b>\"Contribute to Open Source: the "
-"right way\"</b>! You can <a href=\"https://daniele.tech/2020/07/contribute-to-"
-"open-source-the-right-way-2nd-edition-download-the-free-open-book-now/"
-"\">download your copy for free</a> :-D"
+"I published a free and open source book... <b>\"Contribute to Open Source: "
+"the right way\"</b>! You can <a href=\"https://daniele.tech/2020/07/"
+"contribute-to-open-source-the-right-way-2nd-edition-download-the-free-open-"
+"book-now/\">download your copy for free</a> :-D"
 msgstr ""
-"Ho pubblicato un libro gratuito e open source...<b>\"Contribute to Open Source: "
-"the right way\"</b>! Puoi <a href=\"https://daniele.tech/2019/10/contribute-to-"
-"opensource-the-right-way-book/\">scaricare la tua copia gratuitamente</a> :-D"
+"Ho pubblicato un libro gratuito e open source...<b>\"Contribute to Open "
+"Source: the right way\"</b>! Puoi <a href=\"https://daniele.tech/2019/10/"
+"contribute-to-opensource-the-right-way-book/\">scaricare la tua copia "
+"gratuitamente</a> :-D"
 
 #: search.php:37
 #, php-format
@@ -550,12 +543,16 @@ msgstr "Cerca"
 msgid "Search &hellip;"
 msgstr "Cerca &hellip;"
 
+#, php-format
+#~ msgid "CDN offered by %1$s"
+#~ msgstr "CDN offerta da %s"
+
 #~ msgid ""
-#~ "Full Stack Developer, OpenSource addicted. Involved in WordPress and Mozilla "
-#~ "projects (a lot)."
+#~ "Full Stack Developer, OpenSource addicted. Involved in WordPress and "
+#~ "Mozilla projects (a lot)."
 #~ msgstr ""
-#~ "Sviluppatore Full Stack, drogato di OpenSource. Contributor in WordPress e "
-#~ "progetti Mozilla (parecchio)."
+#~ "Sviluppatore Full Stack, drogato di OpenSource. Contributor in WordPress "
+#~ "e progetti Mozilla (parecchio)."
 
 #~ msgid ""
 #~ "Full Stack Developer, OpenSource addicted. Involved in WordPress, "
@@ -627,8 +624,8 @@ msgstr "Cerca &hellip;"
 
 #~ msgid ""
 #~ "Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
-#~ "starting point for your next theme project and WordPress website. Use it as "
-#~ "starter theme or as parent theme. It is up to you."
+#~ "starting point for your next theme project and WordPress website. Use it "
+#~ "as starter theme or as parent theme. It is up to you."
 #~ msgstr ""
 #~ "Combinazione del tema _s di Automattic con Bootstrap 4. Realizzato come "
 #~ "solido punto di partenza per il tuo prossimo progetto di tema e sito "
