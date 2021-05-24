@@ -33,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 							<div class="col-md-6">
 								<p>
-                                    <img class="aligncenter wp-image-4335 size-medium" src="https://daniele.tech/wp-content/uploads/2020/12/Open_source1-300x300.png" alt="" width="300" height="300" />
+                                    <a href="https://daniele.tech/podcast/"><img class="aligncenter wp-image-4335 size-medium" src="https://daniele.tech/wp-content/uploads/2020/12/Open_source1-300x300.png" alt="" width="300" height="300" /></a>
                                 </p>
 							</div>
 						</div>
