@@ -231,24 +231,25 @@ function gh_month_pr( $atts ){
 		$a[ 'date_before' ] = $a[ 'year' ] . '-' . $a[ 'month' ] . '-01';
 		$a[ 'date_end' ] = date("Y-m-t", strtotime($dateString));
 	}
+	$output_gl = $output_gh = $output = '';
 
-	if ( false === ( $output = get_transient( 'github_month_status_'. $a[ 'month' ] . '_' . $a[ 'year' ] ) ) ) {
+	if ( false === ( $output_gh = get_transient( 'github_month_status_'. $a[ 'month' ] . '_' . $a[ 'year' ] ) ) ) {
 		$url = "https://api.github.com/search/issues?q=is:pr%20created:>=" . $a[ 'date_before' ] . "%20updated:<=" . $a[ 'date_end' ] . "%20author:mte90";
 		$response = wp_remote_get( $url );
 		$repos = json_decode( wp_remote_retrieve_body( $response ) );
 
-		$output = '<ul>';
+		$output_gh = '<h3>GitHub</h3><ul>';
 
 		foreach ($repos->items as $repo) {
-			$output .= '<li>';
-			$output .= '<a href="' . $repo->html_url . '" target="_blank">';
+			$output_gh .= '<li>';
+			$output_gh .= '<a href="' . $repo->html_url . '" target="_blank">';
 			$name = explode('/', $repo->html_url);
-			$output .= $name[3] . '/' . $name[4] . ' - ' . $repo->title;
-			$output .= '</a>';
-			$output .= '</li>';
+			$output_gh .= $name[3] . '/' . $name[4] . ' - ' . $repo->title;
+			$output_gh .= '</a>';
+			$output_gh .= '</li>';
 		}
 
-		$output .= '</ul>';
+		$output_gh .= '</ul>';
 		$url = "https://api.github.com/search/issues?q=is:issue%20created:>=" . $a[ 'date_before' ] . "%20updated:<=" . $a[ 'date_end' ] . "%20author:mte90";
 		$response = wp_remote_get( $url );
 		$repos = json_decode( wp_remote_retrieve_body( $response ) );
@@ -260,13 +261,15 @@ function gh_month_pr( $atts ){
                 $open++;
             }
 		}
-		$output .= '<a href="https://github.com/issues?q=archived%3Afalse+author%3AMte90+sort%3Aupdated-desc+created%3A%3E%3D' . $a[ 'date_before' ] . '+updated%3A%3C%3D' . $a[ 'date_end' ] . '+is%3Aissue+" target="_blank">This month on GitHub I opened ' . $open . ' tickets and closed ' . $closed . '.</a><br><br>';
-		set_transient( 'github_month_status_' . $a[ 'month' ] . '_' . $a[ 'year' ], $output, WEEK_IN_SECONDS);
+		$output_gh .= '<a href="https://github.com/issues?q=archived%3Afalse+author%3AMte90+sort%3Aupdated-desc+created%3A%3E%3D' . $a[ 'date_before' ] . '+updated%3A%3C%3D' . $a[ 'date_end' ] . '+is%3Aissue+" target="_blank">This month on GitHub I opened ' . $open . ' tickets and closed ' . $closed . '.</a><br><br>';
+		set_transient( 'github_month_status_' . $a[ 'month' ] . '_' . $a[ 'year' ], $output_gh, WEEK_IN_SECONDS);
 	}
 
-	if ( false === ( $output = get_transient( 'gitlab_month_status_'. $a[ 'month' ] . '_' . $a[ 'year' ] ) ) ) {
-		$a[ 'date_end' ] = date("Y-m-d", strtotime($dateString));
-		$url = "https://gitlab.com/api/v4/merge_requests?author_username=Mte90&created_before=" . $a[ 'date_before' ] . "T08:00:00Z%20&created_after=" . $a[ 'date_end' ] . "T24:00:00Z";
+	$output = $output_gh;
+
+	if ( false === ( $output_gl = get_transient( 'gitlab_month_status_'. $a[ 'month' ] . '_' . $a[ 'year' ] ) ) ) {
+		$a[ 'date_end' ] = date("Y-m-t", strtotime($dateString));
+		$url = "https://gitlab.com/api/v4/merge_requests?author_username=Mte90&created_after=" . $a[ 'date_before' ] . "T08:00:00Z%20&created_before=" . $a[ 'date_end' ] . "T24:00:00Z";
 		$response = wp_remote_get( $url,array(
 			'headers'     => array(
 				'Authorization' => 'Bearer ' . GITLAB_TOKEN,
@@ -274,19 +277,19 @@ function gh_month_pr( $atts ){
 		) );
 		$repos = json_decode( wp_remote_retrieve_body( $response ) );
 
-		$output = '<ul>';
+		$output_gl = '<h3>GitLab</h3><ul>';
 
-		foreach ($repos->items as $repo) {
-			$output .= '<li>';
-			$output .= '<a href="' . $repo->web_url . '" target="_blank">';
+		foreach ($repos as $repo) {
+			$output_gl .= '<li>';
+			$output_gl .= '<a href="' . $repo->web_url . '" target="_blank">';
 			$name = explode('/', $repo->web_url);
-			$output .= $name[3] . '/' . $name[4] . ' - ' . $repo->title;
-			$output .= '</a>';
-			$output .= '</li>';
+			$output_gl .= $name[3] . '/' . $name[4] . ' - ' . $repo->title;
+			$output_gl .= '</a>';
+			$output_gl .= '</li>';
 		}
 
-		$output .= '</ul>';
-		$url = "https://gitlab.com/api/v4/issues?author_username=Mte90&created_before=" . $a[ 'date_before' ] . "T08:00:00Z%20&created_after=" . $a[ 'date_end' ] . "T24:00:00Z";
+		$output_gl .= '</ul>';
+		$url = "https://gitlab.com/api/v4/issues?author_username=Mte90&created_after=" . $a[ 'date_before' ] . "T08:00:00Z%20&created_before=" . $a[ 'date_end' ] . "T24:00:00Z";
 		$response = wp_remote_get( $url,array(
 			'headers'     => array(
 				'Authorization' => 'Bearer ' . GITLAB_TOKEN,
@@ -294,16 +297,18 @@ function gh_month_pr( $atts ){
 		) );
 		$repos = json_decode( wp_remote_retrieve_body( $response ) );
 		$closed = $open = 0;
-		foreach ($repos->items as $repo) {
+		foreach ($repos as $repo) {
             if( $repo->state === 'closed' ) {
                 $closed++;
-            } else if( $repo->state === 'open' ) {
+            } else if( $repo->state === 'opened' ) {
                 $open++;
             }
 		}
-		$output .= '<a href="https://gitlab.com/dashboard/issues/?author_username=Mte90" target="_blank">This month on GitLab I opened ' . $open . ' tickets and closed ' . $closed . '.</a><br><br>';
-		set_transient( 'gitlab_month_status_' . $a[ 'month' ] . '_' . $a[ 'year' ], $output, WEEK_IN_SECONDS);
+		$output_gl .= '<a href="https://gitlab.com/dashboard/issues/?author_username=Mte90" target="_blank">This month on GitLab I opened ' . $open . ' tickets and closed ' . $closed . '.</a><br><br>';
+		set_transient( 'gitlab_month_status_' . $a[ 'month' ] . '_' . $a[ 'year' ], $output_gl, WEEK_IN_SECONDS);
 	}
+
+	$output .= $output_gl;
 
 	return $output;
 }
