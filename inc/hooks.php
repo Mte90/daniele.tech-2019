@@ -244,9 +244,18 @@ add_action( 'wp_enqueue_scripts', function() {
 add_filter( 'get_the_excerpt', 'replace_post_excerpt_filter' );
 
 function replace_post_excerpt_filter($output) {
-        $yoast = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
-        if (empty($yoast)) {
-			return $output;
-        }
-        return $yoast;
+    $yoast = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
+    if (empty($yoast)) {
+	return $output;
+    }
+    return $yoast;
+}
+
+add_filter( 'feed_link', 'add_lang_for_italian' );
+
+function add_lang_for_italian($url) {
+    if ( pll_current_language() == 'it' ) {
+        return $url . '?lang=';
+    }
+    return $url;
 }
