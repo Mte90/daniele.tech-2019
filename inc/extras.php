@@ -267,7 +267,7 @@ function gh_month_pr( $atts ){
 
 	$output = $output_gh;
 
-// 	if ( false === ( $output_gl = get_transient( 'gitlab_month_status_'. $a[ 'month' ] . '_' . $a[ 'year' ] ) ) ) {
+	if ( false === ( $output_gl = get_transient( 'gitlab_month_status_'. $a[ 'month' ] . '_' . $a[ 'year' ] ) ) ) {
 		$a[ 'date_end' ] = date("Y-m-t", strtotime($dateString));
 		$url = "https://gitlab.com/api/v4/merge_requests?author_username=Mte90&created_after=" . $a[ 'date_before' ] . "T08:00:00Z%20&created_before=" . $a[ 'date_end' ] . "T24:00:00Z";
 		$response = wp_remote_get( $url,array(
@@ -315,7 +315,7 @@ function gh_month_pr( $atts ){
 		}
 		$output_gl .= '<a href="https://gitlab.com/dashboard/issues/?author_username=Mte90" target="_blank">This month on GitLab I opened ' . $open . ' tickets and closed ' . $closed . '.</a><br><br>';
 		set_transient( 'gitlab_month_status_' . $a[ 'month' ] . '_' . $a[ 'year' ], $output_gl, WEEK_IN_SECONDS);
-// 	}
+	}
 
 	$output .= $output_gl;
 
