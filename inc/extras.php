@@ -322,3 +322,8 @@ function gh_month_pr( $atts ){
 	return $output;
 }
 add_shortcode( 'gh_month_pr', 'gh_month_pr' );
+
+add_shortcode( 'alert', 'daniele_alert' );
+function daniele_alert( $atts, $content = null ) {
+	return '<div class="alert alert-warning">' . $content . '</div>';
+}
