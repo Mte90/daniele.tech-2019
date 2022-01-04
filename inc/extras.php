@@ -146,7 +146,7 @@ function get_home_photo_carousel() {
 	return $html;
 }
 
-function get_last_5_from_cat( $id ) {
+function get_last_5_from_cat( $id, $item = 5 ) {
 	// get the localized id
 	$pl_id = $id;
 	if(function_exists('pll_get_term')) {
@@ -159,17 +159,20 @@ function get_last_5_from_cat( $id ) {
 	$out     .= '<ul>';
 	$args     = array(
 		'cat'              => array( $pl_id, $id ),
-		'posts_per_page'   => 5,
+		'posts_per_page'   => $item,
 		'order'            => 'DESC',
 		'orderby'          => 'date',
 		'category__not_in' => 272,
 		'lang'			 => 'it,en',
 	);
+    if ( $id === 272 ) {
+        unset($args['category__not_in']);
+    }
 	$catquery = new WP_Query( $args );
 
 	while ( $catquery->have_posts() ) {
 		$catquery->the_post();
-		$out .= '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>' . "\n";
+		$out .= '<li><a href="' . get_the_permalink() . '">' . str_replace( 'My free software and open source activities of ' , '', get_the_title() ) . '</a></li>' . "\n";
 	};
 	$out .= '</ul>';
 

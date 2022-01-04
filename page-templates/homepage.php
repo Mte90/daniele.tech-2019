@@ -41,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="container category-block">
 						<div class="row">
 							<div class="col-md-6">
-								<?php echo get_last_5_from_cat( 294 ); ?>
+								<?php echo get_last_5_from_cat( 272, 10 ); ?>
 							</div>
 							<div class="col-md-6">
 								<?php echo get_last_5_from_cat( 75 ); ?>

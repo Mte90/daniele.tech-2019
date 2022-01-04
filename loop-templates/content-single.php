@@ -31,16 +31,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="entry-content">
 
 		<?php
-			if ( get_post_type( get_the_ID() ) === 'books-review' ) {
-				echo '<div class="alert alert-success" role="alert">';
-				_e( 'This is a review of a book that I read and I want to suggest. I am not getting money of it also because I don\'t put links of online shops. It is not a professional review!', 'understrap' );
-				echo '</div>';
-			}
-			the_content();
-
 			echo '<div class="alert alert-success" role="alert">';
 			_e( 'I published a free and open source book... <b>"Contribute to Open Source: the right way"</b>! You can <a href="https://daniele.tech/2020/07/contribute-to-open-source-the-right-way-2nd-edition-download-the-free-open-book-now/">download your copy for free</a> :-D', 'understrap' );
 			echo '</div>';
+			if ( pll_current_language() === 'it' ) {
+				echo '<div class="alert alert-success" role="alert">';
+				_e( 'Ascolta il mio podcast settimanale <a href="https://daniele.tech/podcast/"><b>Opinioni in Open Source</b><a/>!', 'understrap' );
+				echo '</div>';
+			}
+
+			the_content();
 		?>
 
 <?php
