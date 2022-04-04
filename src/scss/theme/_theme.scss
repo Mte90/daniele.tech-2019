@@ -1,6 +1,12 @@
 blockquote {
-	  padding: 10px;
+	padding: 10px;
 	font-style: italic;
+}
+pre {
+	background: #d6eafb;
+	padding: 5px;
+	border-radius: 5px;
+	max-height: 500px;
 }
 
 #sb_super_bar.default .sb_text-size a, #sb_super_bar.default .sb_text-size span, #sb_super_bar.default .sb_prev-next-posts .sb_next_post_info span.sb_category {
