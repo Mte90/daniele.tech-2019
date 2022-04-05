@@ -103,7 +103,50 @@ ol.children {
 .navbar-right, .edit-link {
 	float: right;
 }
-
+.navbar-toggler {
+	width: 60px;
+}
+@media (max-width:576px){
+	.navbar-left .navbar-nav li i {
+		width: 260px;
+		text-align: left;
+		padding: 10px;
+	}
+	.navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-toggler {
+		color: rgb(255, 255, 255);
+		font-size: 24px;
+	}
+	.navbar-left {
+		.navbar-toggler {
+			float: left;
+		}
+		.navbar-nav {
+			padding-bottom: 15px;
+			margin-top: -10px;
+		}
+	}
+	.navbar-right {
+		.navbar-toggler {
+			float: right;
+		}
+	}
+	.navbar-toggler {
+		width: 60px;
+		position: relative;
+	}
+	.row {
+		width:100%;
+		margin: 0 auto;
+	}
+	#wrapper-footer {
+		display: none;
+	}
+	#single-wrapper {
+		z-index: -90;
+		position: absolute;
+		margin-top: 90px;
+	}
+}
 // Extracted from http://l-lin.github.io/font-awesome-animation/
 @keyframes float{
 	0%{transform: translateY(0)}
