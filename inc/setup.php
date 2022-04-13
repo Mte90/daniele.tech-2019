@@ -136,3 +136,9 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 		return $post_excerpt;
 	}
 }
+
+add_filter('mce_external_plugins', 'add_tinymce_autolink_plugin');
+function add_tinymce_autolink_plugin($plugins){
+	$plugins['autolink'] = get_stylesheet_directory_uri().'/js/autolink.min.js';
+	return $plugins;
+}
