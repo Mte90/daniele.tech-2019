@@ -54,10 +54,7 @@ function add_span_menu_item( $title ) {
 
 function gfont_resource_hints( $hints, $relation_type ) {
 	if ( 'preconnect' === $relation_type ) {
-		$hints[] = '//fonts.googleapis.com';
-		$hints[] = '//fonts.gstatic.com';
-		$hints[] = '//cdnjs.cloudflare.com';
-		$hints[] = '//mte90-mte90net.netdna-ssl.com';
+		$hints[] = '//fonts.bunny.net';
 		$hints[] = '//www.google.com';
 		$hints[] = '//stats.g.doubleclick.net';
 	}
