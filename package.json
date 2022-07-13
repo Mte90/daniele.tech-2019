@@ -11,6 +11,7 @@
   "license": "GPL-2.0",
   "dependencies": {
     "bootstrap": "4.3.1",
+    "sass": "^1.53.0",
     "undescores-for-npm": "^1.0.0"
   },
   "devDependencies": {
@@ -26,7 +27,7 @@
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^5.0.3",
     "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack-stream": "^5.2.1",

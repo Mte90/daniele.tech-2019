@@ -9,14 +9,6 @@ pre {
 	max-height: 500px;
 }
 
-#sb_super_bar.default .sb_text-size a, #sb_super_bar.default .sb_text-size span, #sb_super_bar.default .sb_prev-next-posts .sb_next_post_info span.sb_category {
-	background-color:$blue;
-}
-
-.sb_share i {
-	font-size:34px;
-}
-
 img.wp-smiley, img.emoji, .codeat h3 img {
     display: inline !important;
     border: none !important;
@@ -147,6 +139,7 @@ ol.children {
 		z-index: -90;
 		position: absolute;
 		margin-top: 90px;
+		width: 100%;
 	}
 }
 // Extracted from http://l-lin.github.io/font-awesome-animation/

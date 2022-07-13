@@ -1,7 +1,6 @@
 // Defining requirements
 import { src, dest, watch, series, parallel } from 'gulp';
 import yargs from 'yargs';
-import sass from 'gulp-sass';
 import cleanCss from 'gulp-clean-css';
 import gulpif from 'gulp-if';
 import sourcemaps from 'gulp-sourcemaps';
@@ -12,9 +11,9 @@ import del from 'del';
 import webpack from 'webpack-stream';
 import browserSync from "browser-sync";
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-
 const PRODUCTION = yargs.argv.prod;
 const server = browserSync.create();
+const sass = require('gulp-sass')(require('sass'));
 
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
