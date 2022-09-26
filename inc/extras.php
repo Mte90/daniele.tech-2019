@@ -330,3 +330,11 @@ add_shortcode( 'alert', 'daniele_alert' );
 function daniele_alert( $atts, $content = null ) {
 	return '<div class="alert alert-warning">' . $content . '</div>';
 }
+
+function remove_pages_from_search($query) {
+	if ($query->is_search) {
+		$query->set('post_type', 'post');
+	}
+	return $query;
+}
+add_filter('pre_get_posts','remove_pages_from_search');
