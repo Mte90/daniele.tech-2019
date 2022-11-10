@@ -180,48 +180,6 @@ function get_last_5_from_cat( $id, $item = 5 ) {
 	return $out;
 }
 
-function get_last_5_from_guestpost() {
-	$out      = '<h3>' . __( 'My Guest Posts', 'understrap' ) . '</h3>';
-	$out     .= '<ul>';
-	$args     = array(
-		'post_type'      => 'guest_post',
-		'posts_per_page' => 5,
-		'order'          => 'DESC',
-		'orderby'        => 'date',
-		'lang'			 => 'it,en',
-	);
-	$catquery = new WP_Query( $args );
-
-	while ( $catquery->have_posts() ) {
-		$catquery->the_post();
-		$out .= '<li><a href="' . guest_post_permalink( get_the_permalink() ) . '">' . get_the_title() . '</a></li>' . "\n";
-	};
-	$out .= '</ul>';
-	$out .= '<span class="btn btn-success archive"><a href="' . get_category_link( $pl_id ) . '">' . __( 'Archive', 'understrap' ) . '</a></span>' . "\n";
-	return $out;
-}
-
-function get_last_5_from_books() {
-	$out      = '<h3>' . __( 'Books Reviews', 'understrap' ) . '</h3>';
-	$out     .= '<ul>';
-	$args     = array(
-		'post_type'      => 'books-review',
-		'posts_per_page' => 5,
-		'order'          => 'DESC',
-		'orderby'        => 'date',
-		'lang'			 => 'it,en',
-	);
-	$catquery = new WP_Query( $args );
-
-	while ( $catquery->have_posts() ) {
-		$catquery->the_post();
-		$out .= '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>' . "\n";
-	};
-	$out .= '</ul>';
-	$out .= '<span class="btn btn-success archive"><a href="' . get_category_link( $pl_id ) . '">' . __( 'Archive', 'understrap' ) . '</a></span>' . "\n";
-	return $out;
-}
-
 function gh_month_pr( $atts ){
 	$a = shortcode_atts( array(
 		'date_end' => '',
