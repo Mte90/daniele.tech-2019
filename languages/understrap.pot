@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2022-09-02 14:05+0200\n"
+"POT-Creation-Date: 2023-04-27 16:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
@@ -85,11 +85,11 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: header.php:32
+#: header.php:41
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:51 header.php:72
+#: header.php:60 header.php:81
 msgid "Toggle navigation"
 msgstr ""
 
@@ -183,17 +183,8 @@ msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
-#: inc/extras.php:179 inc/extras.php:200 inc/extras.php:221
-#: inc/widgets/last-5-reports.php:63
+#: inc/extras.php:179 inc/widgets/last-5-reports.php:63
 msgid "Archive"
-msgstr ""
-
-#: inc/extras.php:184
-msgid "My Guest Posts"
-msgstr ""
-
-#: inc/extras.php:205
-msgid "Books Reviews"
 msgstr ""
 
 #: inc/hooks.php:30
@@ -208,86 +199,6 @@ msgstr ""
 #: inc/hooks.php:38
 #, php-format
 msgid "%1$sTheme%2$s by Daniele Scasciafratte based on understrap"
-msgstr ""
-
-#: inc/hooks.php:73 inc/hooks.php:82
-msgid "Link"
-msgstr ""
-
-#: inc/hooks.php:91
-msgctxt "Post Type General Name"
-msgid "Guest Posts"
-msgstr ""
-
-#: inc/hooks.php:92
-msgctxt "Post Type Singular Name"
-msgid "Guest Post"
-msgstr ""
-
-#: inc/hooks.php:93 inc/hooks.php:107
-msgid "Guest Post"
-msgstr ""
-
-#: inc/hooks.php:94 inc/hooks.php:131
-msgid "Parent Item:"
-msgstr ""
-
-#: inc/hooks.php:95 inc/hooks.php:132
-msgid "All Items"
-msgstr ""
-
-#: inc/hooks.php:96 inc/hooks.php:133
-msgid "View Item"
-msgstr ""
-
-#: inc/hooks.php:97 inc/hooks.php:134
-msgid "Add New Item"
-msgstr ""
-
-#: inc/hooks.php:98 inc/hooks.php:135
-msgid "Add New"
-msgstr ""
-
-#: inc/hooks.php:99 inc/hooks.php:136
-msgid "Edit Item"
-msgstr ""
-
-#: inc/hooks.php:100 inc/hooks.php:137
-msgid "Update Item"
-msgstr ""
-
-#: inc/hooks.php:101 inc/hooks.php:138
-msgid "Search Item"
-msgstr ""
-
-#: inc/hooks.php:102 inc/hooks.php:139
-msgid "Not found"
-msgstr ""
-
-#: inc/hooks.php:103 inc/hooks.php:140
-msgid "Not found in Trash"
-msgstr ""
-
-#: inc/hooks.php:106
-msgid "guest_post"
-msgstr ""
-
-#: inc/hooks.php:128
-msgctxt "Post Type General Name"
-msgid "Books"
-msgstr ""
-
-#: inc/hooks.php:129
-msgctxt "Post Type Singular Name"
-msgid "Book"
-msgstr ""
-
-#: inc/hooks.php:130 inc/hooks.php:144
-msgid "Books Review"
-msgstr ""
-
-#: inc/hooks.php:143
-msgid "books-review"
 msgstr ""
 
 #: inc/pagination.php:25
@@ -450,10 +361,10 @@ msgstr ""
 
 #: loop-templates/content-single.php:35
 msgid ""
-"I published a free and open source book... <b>\"Contribute to Open Source: "
-"the right way\"</b>! You can <a href=\"https://daniele.tech/2022/09/"
-"contribute-to-open-source-the-right-way-3rd-edition/\">download your copy "
-"for free</a> :-D"
+"<a href=\"https://daniele.tech/2022/09/contribute-to-open-source-the-right-"
+"way-3rd-edition/\">\"Contribute to Open Source: the right way\"</a> is my "
+"free and open source book, about... <i>Open Source</i>!<br>It will help you "
+"to improve your skills or how to understand how to start this journey!"
 msgstr ""
 
 #: loop-templates/content-single.php:39

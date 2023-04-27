@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2022-09-02 14:05+0200\n"
-"PO-Revision-Date: 2022-09-02 14:05+0200\n"
+"POT-Creation-Date: 2023-04-27 16:20+0200\n"
+"PO-Revision-Date: 2023-04-27 16:21+0200\n"
 "Last-Translator: Mte90 <mte90net@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it_IT\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
@@ -107,11 +107,11 @@ msgstr "Commenti più recenti &rarr;"
 msgid "Comments are closed."
 msgstr "Commenti disabilitati."
 
-#: header.php:32
+#: header.php:41
 msgid "Skip to content"
 msgstr "Vai al contenuto"
 
-#: header.php:51 header.php:72
+#: header.php:60 header.php:81
 #, fuzzy
 #| msgid "Comment navigation"
 msgid "Toggle navigation"
@@ -196,7 +196,7 @@ msgstr ""
 #: inc/customizer.php:127
 #, fuzzy
 msgid "No sidebar"
-msgstr "Barra Laterale"
+msgstr "Barra laterale"
 
 #: inc/extras.php:97
 msgid "Post navigation"
@@ -212,18 +212,9 @@ msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
-#: inc/extras.php:179 inc/extras.php:200 inc/extras.php:221
-#: inc/widgets/last-5-reports.php:63
+#: inc/extras.php:179 inc/widgets/last-5-reports.php:63
 msgid "Archive"
 msgstr "Archivio"
-
-#: inc/extras.php:184
-msgid "My Guest Posts"
-msgstr "I miei guest post"
-
-#: inc/extras.php:205
-msgid "Books Reviews"
-msgstr "Recensione libri"
 
 #: inc/hooks.php:30
 msgid "https://www.classicpress.net/"
@@ -238,100 +229,6 @@ msgstr "Orgogliosamente realizzato con %s"
 #, php-format
 msgid "%1$sTheme%2$s by Daniele Scasciafratte based on understrap"
 msgstr "%1$sTheme%2$s by Daniele Scasciafratte basato su understrap"
-
-#: inc/hooks.php:73 inc/hooks.php:82
-msgid "Link"
-msgstr "Link"
-
-#: inc/hooks.php:91
-#, fuzzy
-msgctxt "Post Type General Name"
-msgid "Guest Posts"
-msgstr "Guest Post"
-
-#: inc/hooks.php:92
-#, fuzzy
-msgctxt "Post Type Singular Name"
-msgid "Guest Post"
-msgstr "Guest Post"
-
-#: inc/hooks.php:93 inc/hooks.php:107
-#, fuzzy
-msgid "Guest Post"
-msgstr "Guest Post"
-
-#: inc/hooks.php:94 inc/hooks.php:131
-msgid "Parent Item:"
-msgstr ""
-
-#: inc/hooks.php:95 inc/hooks.php:132
-msgid "All Items"
-msgstr ""
-
-#: inc/hooks.php:96 inc/hooks.php:133
-#, fuzzy
-msgid "View Item"
-msgstr "Visualizza"
-
-#: inc/hooks.php:97 inc/hooks.php:134
-#, fuzzy
-msgid "Add New Item"
-msgstr "Aggiungi"
-
-#: inc/hooks.php:98 inc/hooks.php:135
-#, fuzzy
-msgid "Add New"
-msgstr "Aggiungi nuova"
-
-#: inc/hooks.php:99 inc/hooks.php:136
-#, fuzzy
-#| msgid "Edit %s"
-msgid "Edit Item"
-msgstr "Modifica"
-
-#: inc/hooks.php:100 inc/hooks.php:137
-#, fuzzy
-msgid "Update Item"
-msgstr "Aggiorna"
-
-#: inc/hooks.php:101 inc/hooks.php:138
-#, fuzzy
-#| msgid "Search"
-msgid "Search Item"
-msgstr "Cerca"
-
-#: inc/hooks.php:102 inc/hooks.php:139
-msgid "Not found"
-msgstr "Non trovato"
-
-#: inc/hooks.php:103 inc/hooks.php:140
-#, fuzzy
-msgid "Not found in Trash"
-msgstr "Nessun %s trovato nel Cestino"
-
-#: inc/hooks.php:106
-#, fuzzy
-msgid "guest_post"
-msgstr "Guest Post"
-
-#: inc/hooks.php:128
-msgctxt "Post Type General Name"
-msgid "Books"
-msgstr "Libri"
-
-#: inc/hooks.php:129
-msgctxt "Post Type Singular Name"
-msgid "Book"
-msgstr "Libro"
-
-#: inc/hooks.php:130 inc/hooks.php:144
-msgid "Books Review"
-msgstr "Recensione libri"
-
-#: inc/hooks.php:143
-#, fuzzy
-msgid "books-review"
-msgstr "Recensione libri"
 
 #: inc/pagination.php:25
 msgid "&laquo;"
@@ -505,15 +402,15 @@ msgstr "Modifica"
 
 #: loop-templates/content-single.php:35
 msgid ""
-"I published a free and open source book... <b>\"Contribute to Open Source: "
-"the right way\"</b>! You can <a href=\"https://daniele.tech/2022/09/"
-"contribute-to-open-source-the-right-way-3rd-edition/\">download your copy "
-"for free</a> :-D"
+"<a href=\"https://daniele.tech/2022/09/contribute-to-open-source-the-right-"
+"way-3rd-edition/\">\"Contribute to Open Source: the right way\"</a> is my "
+"free and open source book, about... <i>Open Source</i>!<br>It will help you "
+"to improve your skills or how to understand how to start this journey!"
 msgstr ""
-"Ho pubblicato un libro gratuito e open source...<b>\"Contribute to Open "
-"Source: the right way\"</b>! Puoi <a href=\"https://daniele.tech/2022/09/"
-"contribute-to-open-source-the-right-way-3rd-edition/\">scaricare la tua "
-"copia gratuitamente</a> :-D"
+"<a href=\"https://daniele.tech/2022/09/contribute-to-open-source-the-right-"
+"way-3rd-edition/\">\"Contribute to Open Source: the right way\"</a> è il mio "
+"libro open e gratuito, riguardo... <i>l'Open Source</i>!<br>Ti aiuterà a "
+"migliorare le tue conoscenze ma anche capire come iniziare questo viaggio!"
 
 #: loop-templates/content-single.php:39
 msgid ""
@@ -533,6 +430,92 @@ msgstr "Cerca"
 #: searchform.php:17
 msgid "Search &hellip;"
 msgstr "Cerca &hellip;"
+
+#~ msgid "My Guest Posts"
+#~ msgstr "I miei guest post"
+
+#~ msgid "Books Reviews"
+#~ msgstr "Recensione libri"
+
+#~ msgid "Link"
+#~ msgstr "Link"
+
+#, fuzzy
+#~ msgctxt "Post Type General Name"
+#~ msgid "Guest Posts"
+#~ msgstr "Guest Post"
+
+#, fuzzy
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Guest Post"
+#~ msgstr "Guest Post"
+
+#, fuzzy
+#~ msgid "Guest Post"
+#~ msgstr "Guest Post"
+
+#, fuzzy
+#~ msgid "View Item"
+#~ msgstr "Visualizza"
+
+#, fuzzy
+#~ msgid "Add New Item"
+#~ msgstr "Aggiungi"
+
+#, fuzzy
+#~ msgid "Add New"
+#~ msgstr "Aggiungi nuova"
+
+#, fuzzy
+#~| msgid "Edit %s"
+#~ msgid "Edit Item"
+#~ msgstr "Modifica"
+
+#, fuzzy
+#~ msgid "Update Item"
+#~ msgstr "Aggiorna"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search Item"
+#~ msgstr "Cerca"
+
+#~ msgid "Not found"
+#~ msgstr "Non trovato"
+
+#, fuzzy
+#~ msgid "Not found in Trash"
+#~ msgstr "Nessun %s trovato nel Cestino"
+
+#, fuzzy
+#~ msgid "guest_post"
+#~ msgstr "Guest Post"
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Books"
+#~ msgstr "Libri"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Book"
+#~ msgstr "Libro"
+
+#~ msgid "Books Review"
+#~ msgstr "Recensione libri"
+
+#, fuzzy
+#~ msgid "books-review"
+#~ msgstr "Recensione libri"
+
+#~ msgid ""
+#~ "I published a free and open source book... <b>\"Contribute to Open "
+#~ "Source: the right way\"</b>! You can <a href=\"https://daniele."
+#~ "tech/2022/09/contribute-to-open-source-the-right-way-3rd-edition/"
+#~ "\">download your copy for free</a> :-D"
+#~ msgstr ""
+#~ "Ho pubblicato un libro gratuito e open source...<b>\"Contribute to Open "
+#~ "Source: the right way\"</b>! Puoi <a href=\"https://daniele.tech/2022/09/"
+#~ "contribute-to-open-source-the-right-way-3rd-edition/\">scaricare la tua "
+#~ "copia gratuitamente</a> :-D"
 
 #~ msgid ""
 #~ "This is a review of a book that I read and I want to suggest. I am not "

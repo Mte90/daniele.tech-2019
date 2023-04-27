@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php
 			echo '<div class="alert alert-success" role="alert">';
-			_e( 'I published a free and open source book... <b>"Contribute to Open Source: the right way"</b>! You can <a href="https://daniele.tech/2022/09/contribute-to-open-source-the-right-way-3rd-edition/">download your copy for free</a> :-D', 'understrap' );
+			_e( '<a href="https://daniele.tech/2022/09/contribute-to-open-source-the-right-way-3rd-edition/">"Contribute to Open Source: the right way"</a> is my free and open source book, about... <i>Open Source</i>!<br>It will help you to improve your skills or how to understand how to start this journey!', 'understrap' );
 			echo '</div>';
 			if ( pll_current_language() === 'it' ) {
 				echo '<div class="alert alert-success" role="alert">';
