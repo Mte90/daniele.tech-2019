@@ -121,3 +121,5 @@ function add_lang_for_italian($url) {
 add_filter('bsi_text', function($text) {
   return str_replace(' - Daniele Mte90 Scasciafratte', '', $text);
 }, 100);
+
+add_filter('feed_links_show_comments_feed', '__return_false');
