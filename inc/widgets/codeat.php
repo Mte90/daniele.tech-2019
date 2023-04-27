@@ -33,7 +33,7 @@ class Codeat_Widget extends WPH_Widget {
 		$out .= $args[ 'after_title' ];
 
 		$out .= '<p>';
-		$out .= __( 'My <a href="https://codeat.co">WebAgency in Rome</a> about WordPress development. We work on freemium plugin development and website/application customization.', 'understrap' );
+		$out .= __( 'My <a href="https://codeat.co">WebAgency in Rome</a> about Web consultancy. We produce WP freemium plugins, custom web application but also performance consultancy for web pages.', 'understrap' );
 		$out .= '</p>';
 
 		$out .= $args[ 'after_widget' ];

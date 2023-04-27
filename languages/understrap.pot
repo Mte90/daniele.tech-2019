@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2023-04-27 16:20+0200\n"
+"POT-Creation-Date: 2023-04-27 16:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -293,8 +293,8 @@ msgstr ""
 
 #: inc/widgets/about-me.php:36
 msgid ""
-"Full Stack Developer, OpenSource addicted. Involved a lot in WordPress and "
-"Mozilla projects."
+"Full Stack Dev, since 2010 involved in Open Source, mainly in Mozilla and "
+"WordPress projects."
 msgstr ""
 
 #: inc/widgets/codeat.php:13
@@ -307,9 +307,9 @@ msgstr ""
 
 #: inc/widgets/codeat.php:36
 msgid ""
-"My <a href=\"https://codeat.co\">WebAgency in Rome</a> about WordPress "
-"development. We work on freemium plugin development and website/application "
-"customization."
+"My <a href=\"https://codeat.co\">WebAgency in Rome</a> about Web "
+"consultancy. We produce WP freemium plugins, custom web application but also "
+"performance consultancy for web pages."
 msgstr ""
 
 #: inc/widgets/last-5-reports.php:13
