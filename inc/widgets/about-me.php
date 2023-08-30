@@ -32,7 +32,7 @@ class About_Me_Widget extends WPH_Widget {
 		$out .= 'Ciao <img class="emoji" alt="Italy flag" src="https://s.w.org/images/core/emoji/11/svg/1f1ee-1f1f9.svg"> I am Daniele';
 		$out .= $args[ 'after_title' ];
 
-		$out .= '<p><img alt="Daniele in pixels" src="' . get_template_directory_uri() . '/img/pixel.png">';
+		$out .= '<p><img height="96" width="96" alt="Daniele in pixel" src="' . get_template_directory_uri() . '/img/pixel.png">';
 		$out .= __( 'Full Stack Dev, since 2010 involved in Open Source, mainly in Mozilla and WordPress projects.', 'understrap' );
 		$out .= '</p>';
 

@@ -64,6 +64,17 @@ function gfont_resource_hints( $hints, $relation_type ) {
 
 add_filter( 'wp_resource_hints', 'gfont_resource_hints', 10, 2 );
 
+add_filter('style_loader_tag', 'preload_gfont', 10, 2);
+
+function preload_gfont($html, $handle) {
+	if ( $handle === 'google-fonts' || strpos( $handle, 'fontawesome' ) !== false ) {
+		return str_replace("rel='stylesheet'",
+						   "rel='preload' as='style' onload=\"this.rel='stylesheet'\"", $html);
+	}
+
+	return $html;
+}
+
 function wpseo_disable_rel_author( $link ) {
     return false;
 }
