@@ -296,3 +296,14 @@ function remove_pages_from_search($query) {
 	return $query;
 }
 add_filter('pre_get_posts','remove_pages_from_search');
+
+remove_action( 'wp_head', 'feed_links_extra', 3 );
+add_filter( 'wpseo_robots', 'noindex_subcategory_pages' );
+
+function noindex_subcategory_pages( $robotsstr ) {
+	if ( is_archive() && is_paged() && intval(get_query_var('paged')) > 10 ) {
+		return 'noindex,follow';
+	}
+
+	return $robotsstr;
+}
