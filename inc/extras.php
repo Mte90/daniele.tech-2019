@@ -211,7 +211,7 @@ function gh_month_pr( $atts ){
 		}
 
 		$output_gh .= '</ul>';
-		$url = "https://api.github.com/search/issues?q=is:issue%20created:>=" . $a[ 'date_before' ] . "%20updated:<=" . $a[ 'date_end' ] . "%20author:mte90";
+		$url = "https://api.github.com/search/issues?q=is:issue%20created:>=" . trim( $a[ 'date_before' ] ) . "%20updated:<=" . trim( $a[ 'date_end' ] ) . "%20author:mte90";
 		$response = wp_remote_get( $url );
 		$repos = json_decode( wp_remote_retrieve_body( $response ) );
 		$closed = $open = 0;
@@ -230,7 +230,7 @@ function gh_month_pr( $atts ){
 
 	if ( false === ( $output_gl = get_transient( 'gitlab_month_status_'. $a[ 'month' ] . '_' . $a[ 'year' ] ) ) ) {
 		$a[ 'date_end' ] = date("Y-m-t", strtotime($dateString));
-		$url = "https://gitlab.com/api/v4/merge_requests?author_username=Mte90&created_after=" . $a[ 'date_before' ] . "T08:00:00Z%20&created_before=" . $a[ 'date_end' ] . "T24:00:00Z";
+		$url = "https://gitlab.com/api/v4/merge_requests?author_username=Mte90&created_after=" . trim( $a[ 'date_before' ] ) . "T08:00:00Z&created_before=" . trim( $a[ 'date_end' ] ) . "T24:00:00Z";
 		$response = wp_remote_get( $url,array(
 			'headers'     => array(
 				'Authorization' => 'Bearer ' . GITLAB_TOKEN,
@@ -238,7 +238,14 @@ function gh_month_pr( $atts ){
 		) );
 		$repos = json_decode( wp_remote_retrieve_body( $response ) );
 
-		$output_gl = '<h3>GitLab</h3><ul>';
+		$output_gl = '<h3>GitLab</h3>';
+		if(is_object($repos) && $repos->error) {
+			$output_gl .= "Token expired";
+			$output .= $output_gl;
+			return $output;
+		}
+
+		$output_gl .= '<ul>';
 
 		foreach ($repos as $repo) {
 			$name = explode('/', $repo->web_url);
