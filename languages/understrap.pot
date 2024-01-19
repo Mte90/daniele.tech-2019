@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2023-04-27 16:31+0200\n"
+"POT-Creation-Date: 2024-01-19 16:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
@@ -187,18 +187,9 @@ msgstr ""
 msgid "Archive"
 msgstr ""
 
-#: inc/hooks.php:30
-msgid "https://www.classicpress.net/"
-msgstr ""
-
-#: inc/hooks.php:33
+#: inc/hooks.php:32
 #, php-format
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: inc/hooks.php:38
-#, php-format
-msgid "%1$sTheme%2$s by Daniele Scasciafratte based on understrap"
+msgid "%1$sDaniele.Tech-2019%2$s by Daniele Scasciafratte based on understrap"
 msgstr ""
 
 #: inc/pagination.php:25

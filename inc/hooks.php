@@ -26,16 +26,10 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
 	 */
 	function understrap_add_site_info() {
 		$site_info = sprintf(
-			'<a href="%1$s">%2$s</a><span class="sep"> | </span>%3$s',
-			esc_url( __( 'https://www.classicpress.net/', 'understrap' ) ),
-			sprintf(
-				/* translators:*/
-				esc_html__( 'Proudly powered by %s', 'understrap' ),
-				'ClassicPress'
-			),
+			'</span>%1$s',
 			sprintf( // WPCS: XSS ok.
 				/* translators:*/
-				esc_html__( '%1$sTheme%2$s by Daniele Scasciafratte based on understrap', 'understrap' ),
+				esc_html__( '%1$sDaniele.Tech-2019%2$s by Daniele Scasciafratte based on understrap', 'understrap' ),
 				'<a href="https://github.com/Mte90/daniele.tech-2019">',
 				'</a>'
 			)

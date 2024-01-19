@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2023-04-27 16:31+0200\n"
-"PO-Revision-Date: 2023-05-26 10:48+0200\n"
+"POT-Creation-Date: 2024-01-19 16:48+0100\n"
+"PO-Revision-Date: 2024-01-19 16:48+0100\n"
 "Last-Translator: Mte90 <mte90net@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it_IT\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
@@ -216,19 +216,11 @@ msgstr ""
 msgid "Archive"
 msgstr "Archivio"
 
-#: inc/hooks.php:30
-msgid "https://www.classicpress.net/"
-msgstr "https://www.classicpress.net/"
-
-#: inc/hooks.php:33
+#: inc/hooks.php:32
 #, php-format
-msgid "Proudly powered by %s"
-msgstr "Orgogliosamente realizzato con %s"
-
-#: inc/hooks.php:38
-#, php-format
-msgid "%1$sTheme%2$s by Daniele Scasciafratte based on understrap"
-msgstr "%1$sTheme%2$s by Daniele Scasciafratte basato su understrap"
+msgid "%1$sDaniele.Tech-2019%2$s by Daniele Scasciafratte based on understrap"
+msgstr ""
+"%1$sDaniele.Tech-2019%2$s by Daniele Scasciafratte basato su understrap"
 
 #: inc/pagination.php:25
 msgid "&laquo;"
@@ -430,6 +422,13 @@ msgstr "Cerca"
 #: searchform.php:17
 msgid "Search &hellip;"
 msgstr "Cerca &hellip;"
+
+#~ msgid "https://www.classicpress.net/"
+#~ msgstr "https://www.classicpress.net/"
+
+#, php-format
+#~ msgid "Proudly powered by %s"
+#~ msgstr "Orgogliosamente realizzato con %s"
 
 #~ msgid "My Guest Posts"
 #~ msgstr "I miei guest post"
