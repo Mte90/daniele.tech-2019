@@ -17,14 +17,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="home-page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+	<div class="<?php echo esc_attr( $container ); ?> mw-100" id="content">
 
 		<div class="row">
 
-			<div class="col-md-8 content-area" id="primary">
+			<div class="col-md-9 content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
-					<div class="container category-block">
+					<div class="container mw-100 category-block">
 						<div class="row">
 							<div class="col-md-6">
 								<p>
@@ -38,10 +38,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 						</div>
 					</div>
-					<div class="container category-block">
+					<div class="container mw-100 category-block">
 						<div class="row">
 							<div class="col-md-6">
-								<?php echo get_last_5_from_cat( 272, 10 ); ?>
+								<?php echo get_last_5_from_cat( 272, 5 ); ?>
 							</div>
 							<div class="col-md-6">
 								<?php echo get_last_5_from_cat( 75 ); ?>

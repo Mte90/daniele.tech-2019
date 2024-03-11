@@ -43,7 +43,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<nav class="navbar navbar-expand-md navbar-dark bg-info">
 
 		<?php if ( 'container' === $container ) : ?>
-			<div class="container" >
+			<div class="container mw-100" >
 		<?php endif; ?>
 
 		<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a> The Open Source Multiversal Guy
