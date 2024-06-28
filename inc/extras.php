@@ -194,7 +194,7 @@ function gh_month_pr( $atts ){
 	}
 	$output_gl = $output_gh = $output = '';
 
-	if ( false === ( $output_gh = get_transient( 'github_month_status_'. $a[ 'month' ] . '_' . $a[ 'year' ] ) ) ) {
+	if ( is_user_logged_in() || false === ( $output_gh = get_transient( 'github_month_status_'. $a[ 'month' ] . '_' . $a[ 'year' ] ) ) ) {
 		$url = "https://api.github.com/search/issues?q=is:pr%20created:>=" . $a[ 'date_before' ] . "%20updated:<=" . $a[ 'date_end' ] . "%20author:mte90";
 		$response = wp_remote_get( $url );
 		$repos = json_decode( wp_remote_retrieve_body( $response ) );
