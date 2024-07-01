@@ -195,7 +195,7 @@ function gh_month_pr( $atts ){
 	$output_gl = $output_gh = $output = '';
 
 	if ( is_user_logged_in() || false === ( $output_gh = get_transient( 'github_month_status_'. $a[ 'month' ] . '_' . $a[ 'year' ] ) ) ) {
-		$url = "https://api.github.com/search/issues?q=is:pr%20created:>=" . $a[ 'date_before' ] . "%20updated:<=" . $a[ 'date_end' ] . "%20author:mte90";
+		$url = "https://api.github.com/search/issues?q=is:pr%20created:" . $a[ 'date_before' ] . ".." . $a[ 'date_end' ] . "%20author:mte90";
 		$response = wp_remote_get( $url );
 		$repos = json_decode( wp_remote_retrieve_body( $response ) );
 
@@ -211,7 +211,7 @@ function gh_month_pr( $atts ){
 		}
 
 		$output_gh .= '</ul>';
-		$url = "https://api.github.com/search/issues?q=is:issue%20created:>=" . trim( $a[ 'date_before' ] ) . "%20updated:<=" . trim( $a[ 'date_end' ] ) . "%20author:mte90";
+		$url = "https://api.github.com/search/issues?q=is:issue%20created:" . trim( $a[ 'date_before' ] ) . ".." . trim( $a[ 'date_end' ] ) . "%20author:mte90";
 		$response = wp_remote_get( $url );
 		$repos = json_decode( wp_remote_retrieve_body( $response ) );
 		$closed = $open = 0;
