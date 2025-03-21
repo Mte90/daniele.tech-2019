@@ -146,7 +146,7 @@ function get_home_photo_carousel() {
 	return $html;
 }
 
-function get_last_5_from_cat( $id, $item = 5 ) {
+function get_last_5_from_cat( $id, $item = 10 ) {
 	// get the localized id
 	$pl_id = $id;
 	if(function_exists('pll_get_term')) {

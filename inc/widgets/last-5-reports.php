@@ -48,7 +48,7 @@ class Last_Reports_Widget extends WPH_Widget {
 		$out     .= '<ul>';
 		$wpq      = array(
 			'cat'            => '272',
-			'posts_per_page' => 7,
+			'posts_per_page' => 8,
 			'lang'           => 'en',
 			'order'          => 'DESC',
 			'orderby'        => 'date',

@@ -27,21 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="container mw-100 category-block">
 						<div class="row">
 							<div class="col-md-6">
-								<p>
-                                    <a href="https://daniele.tech/2022/09/contribute-to-open-source-the-right-way-3rd-edition/"><img class="wp-image-4261 size-medium aligncenter" src="https://daniele.tech/wp-content/uploads/2022/09/cover-2022-1-300x300.png" alt="" width="300" height="300" /></a>
-								</p>
-							</div>
-							<div class="col-md-6">
-								<p>
-                                    <a href="https://daniele.tech/podcast/"><img class="aligncenter wp-image-4335 size-medium" src="https://daniele.tech/wp-content/uploads/2020/12/Open_source1-300x300.png" alt="" width="300" height="300" /></a>
-                                </p>
-							</div>
-						</div>
-					</div>
-					<div class="container mw-100 category-block">
-						<div class="row">
-							<div class="col-md-6">
-								<?php echo get_last_5_from_cat( 272, 5 ); ?>
+								<?php echo get_last_5_from_cat( 272 ); ?>
 							</div>
 							<div class="col-md-6">
 								<?php echo get_last_5_from_cat( 75 ); ?>

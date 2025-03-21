@@ -33,7 +33,7 @@ class About_Me_Widget extends WPH_Widget {
 		$out .= $args[ 'after_title' ];
 
 		$out .= '<p><img height="96" width="96" alt="Daniele in pixel" src="' . get_template_directory_uri() . '/img/pixel.png">';
-		$out .= __( 'Full Stack Dev, since 2010 involved in Open Source, mainly in Mozilla and WordPress projects.', 'understrap' );
+		$out .= __( 'Full Stack Dev, since 2010 in Open Source, in the past in Mozilla/WordPress projects. Now Amber-lang and Italian Linux Society.', 'understrap' );
 		$out .= '</p>';
 
 		$out .= $args[ 'after_widget' ];
