@@ -185,8 +185,12 @@ function gh_month_pr( $atts ){
 		'date_end' => '',
 		'date_before' => '',
 		'month' => '',
-		'year'  => date("Y")
+		'year'  => date("Y"),
+		'full' => ''
 	), $atts );
+	// `full` enables the previous-report link and the projects list: `full="..."` arrives as named attribute, a bare `full` as positional.
+	$is_full = ! empty( $a['full'] ) || in_array( 'full', array_values( $atts ), true );
+	$output_intro = ( ! empty( $a['month'] ) && $is_full ) ? gh_month_prev_report_link( $a['month'], $a['year'] ) : '';
 	if ( !empty( $a[ 'month' ] ) ) {
 		$dateString = $a[ 'year' ] . '-' . $a[ 'month' ] . '-04';
 		$a[ 'date_before' ] = $a[ 'year' ] . '-' . $a[ 'month' ] . '-01';
@@ -226,7 +230,7 @@ function gh_month_pr( $atts ){
 		set_transient( 'github_month_status_' . $a[ 'month' ] . '_' . $a[ 'year' ], $output_gh, WEEK_IN_SECONDS);
 	}
 
-	$output = $output_gh;
+	$output = $output_intro . $output_gh;
 
 	if ( false === ( $output_gl = get_transient( 'gitlab_month_status_'. $a[ 'month' ] . '_' . $a[ 'year' ] ) ) ) {
 		$a[ 'date_end' ] = date("Y-m-t", strtotime($dateString));
@@ -287,9 +291,104 @@ function gh_month_pr( $atts ){
 
 	$output .= $output_gl;
 
+	if ( ! empty( $a['month'] ) && $is_full ) {
+		$output .= gh_month_projects( $a['month'], $a['year'] );
+	}
+
 	return $output;
 }
 add_shortcode( 'gh_month_pr', 'gh_month_pr' );
+
+function gh_month_prev_report_link( $month, $year ) {
+	$previous = ( new DateTime( $year . '-' . $month . '-01' ) )->modify( 'first day of previous month' );
+	$slug     = 'my-free-software-and-open-source-activities-of-' . strtolower( $previous->format( 'F' ) ) . '-' . $previous->format( 'Y' );
+	$query    = new WP_Query( array(
+		'post_type'      => 'post',
+		'name'           => $slug,
+		'lang'           => 'en',
+		'posts_per_page' => 1,
+		'no_found_rows'  => true,
+	) );
+	if ( empty( $query->posts ) ) {
+		return '';
+	}
+	return '<p>What has happened this month? In the meantime, to read the previous report, go <a href="' . esc_url( get_permalink( $query->posts[0] ) ) . '">here</a>.</p>';
+}
+
+function gh_month_github_get( $path ) {
+	$response = wp_remote_get( 'https://api.github.com/' . $path );
+	if ( is_wp_error( $response ) || 200 !== wp_remote_retrieve_response_code( $response ) ) {
+		return null;
+	}
+	$data = json_decode( wp_remote_retrieve_body( $response ) );
+	return is_array( $data ) ? $data : null;
+}
+
+function gh_month_projects( $month, $year ) {
+	$transient_key = 'github_month_projects_' . $month . '_' . $year;
+	if ( ! is_user_logged_in() && false !== ( $cached = get_transient( $transient_key ) ) ) {
+		return $cached;
+	}
+
+	$start    = sprintf( '%s-%02d-01T00:00:00Z', $year, $month );
+	$end      = date( 'Y-m-t', strtotime( $year . '-' . $month . '-04' ) ) . 'T23:59:59Z';
+	$projects = array();
+
+	foreach ( array( 'users/mte90/repos', 'orgs/CodeAtCode/repos' ) as $repos_path ) {
+		$page = 1;
+		do {
+			$repos = gh_month_github_get( $repos_path . '?per_page=100&page=' . $page );
+			if ( null === $repos ) {
+				// GitHub request failed (rate limit or outage): drop the section and retry in a few minutes instead of showing an error to visitors.
+				set_transient( $transient_key, '', 5 * MINUTE_IN_SECONDS );
+				return '';
+			}
+			foreach ( $repos as $repo ) {
+				// Forks carry no releases of their own, and a release published in range always moves `pushed_at` past the month start.
+				if ( $repo->fork || $repo->pushed_at < $start ) {
+					continue;
+				}
+				$releases = gh_month_github_get( 'repos/' . $repo->full_name . '/releases?per_page=100' );
+				if ( null === $releases ) {
+					set_transient( $transient_key, '', 5 * MINUTE_IN_SECONDS );
+					return '';
+				}
+				$latest = null;
+				foreach ( $releases as $release ) {
+					if ( $release->published_at < $start || $release->published_at > $end ) {
+						continue;
+					}
+					if ( null === $latest || $release->published_at > $latest->published_at ) {
+						$latest = $release;
+					}
+				}
+				if ( null !== $latest ) {
+					$projects[] = array(
+						'url'  => $latest->html_url,
+						'name' => $repo->full_name . ' ' . $latest->tag_name,
+						'date' => $latest->published_at,
+					);
+				}
+			}
+			$page++;
+		} while ( count( $repos ) === 100 );
+	}
+
+	usort( $projects, function ( $left, $right ) {
+		return strcmp( $right['date'], $left['date'] );
+	} );
+
+	$output = '';
+	if ( ! empty( $projects ) ) {
+		$output = '<h3>Projects</h3><ul>';
+		foreach ( $projects as $project ) {
+			$output .= '<li><a href="' . esc_url( $project['url'] ) . '">' . esc_html( $project['name'] ) . '</a> – ' . gmdate( 'Y/m/d', strtotime( $project['date'] ) ) . '</li>';
+		}
+		$output .= '</ul>';
+	}
+	set_transient( $transient_key, $output, WEEK_IN_SECONDS );
+	return $output;
+}
 
 add_shortcode( 'alert', 'daniele_alert' );
 function daniele_alert( $atts, $content = null ) {
